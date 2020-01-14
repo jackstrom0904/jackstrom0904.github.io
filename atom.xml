@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-12T08:11:47.072Z</updated>
+    <updated>2020-01-14T03:42:20.100Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -11,10 +11,10 @@
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
     <entry>
-        <title type="html"><![CDATA[11111]]></title>
-        <id>https://jackstrom0904.github.io/post/11111</id>
-        <link href="https://jackstrom0904.github.io/post/11111">
+        <title type="html"><![CDATA[别了朋友、江湖再见0926]]></title>
+        <id>https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926</id>
+        <link href="https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926">
         </link>
-        <updated>2020-01-12T06:53:09.000Z</updated>
+        <updated>2020-01-14T02:58:34.000Z</updated>
     </entry>
 </feed>
