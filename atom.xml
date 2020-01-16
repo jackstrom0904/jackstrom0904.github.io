@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-14T03:43:13.537Z</updated>
+    <updated>2020-01-16T04:37:40.926Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -11,10 +11,18 @@
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
     <entry>
-        <title type="html"><![CDATA[别了朋友、江湖再见0926]]></title>
+        <title type="html"><![CDATA[别了朋友、江湖再见]]></title>
         <id>https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926</id>
         <link href="https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926">
         </link>
         <updated>2020-01-14T02:58:34.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>    原以为对待朋友同事只要你用心的付出了、就能得到相等的对待、但是由于时间的摧残流逝、渐渐的明白了原来做人不可以在那么实在了。
+    人在漫长的一生中、总会遇到很多的人、这些人曾被我们定义为同学、朋友、同事、爱人、家人、知心网友、擦肩而过的人。人的一生中也正是有这些人的出现与离开，才让我们在生活中尝尽了酸甜苦辣，悲欢离合。
+    曾在知乎上读到这样的一段话、永远不要轻易跟别人交心、一旦交心你的所有一切似乎都会成为他人的笑柄、因为清楚的知道你的一切、所以最后极有可能弄的自己遍体鳞伤。
+    目前由于生态环境的外在因素、更多的我们都处于利益关系。有些人当你给予第一次的时候、他会说声谢谢、但是由于多次给予、渐渐的仿佛已成了习惯、这或许就是人性的本质。
+    一个人永远不要尝试去叫醒那些爱睡懒觉的人、永远不要在讨厌你的人面前给予关心、给予帮助、有时候就算你付出全部、也不一定换来一句真心的感谢。
+    短暂的生命中我们应该去尝试感谢每一个出现的人、是这些人交会了我们如何成长、如何去爱、如何去恨。感谢那些曾经在我最落魄的时候给我建议的人、给我帮助的人、谢谢你们。
+</code></pre>
+]]></content>
     </entry>
 </feed>
