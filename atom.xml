@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-17T01:59:42.392Z</updated>
+    <updated>2020-01-17T02:36:26.549Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu-Metasploit]]></title>
+        <id>https://jackstrom0904.github.io/post/ubuntu-metasploit</id>
+        <link href="https://jackstrom0904.github.io/post/ubuntu-metasploit">
+        </link>
+        <updated>2020-01-17T02:18:51.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>1.Metasploit</strong><br>
+root@bt:/opt# apt-get install curl -y #安装curl<br>
+root@bt:/opt# curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \</p>
+<blockquote>
+<p>chmod 755 msfinstall &amp;&amp; <br>
+./msfinstall<br>
+<strong>2.nmap</strong><br>
+root@bt:/opt# apt-get install -y nmap<br>
+<strong>3.masscan</strong><br>
+root@bt:/opt# apt-get install git -y #安装git<br>
+root@bt:/opt#  git clone https://github.com/robertdavidgraham/masscan<br>
+root@bt:/opt# cd masscan/<br>
+root@bt:/opt# cd make<br>
+root@bt:/opt/masscan# vim /etc/profile  添加到环境变量<br>
+export PATH=/opt/masscan/bin:$PATH<br>
+<strong>4.hydra</strong><br>
+root@bt:# apt-get install hydra -y</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu18.04基本配置]]></title>
         <id>https://jackstrom0904.github.io/post/ubuntu1804-ji-ben-pei-zhi</id>
