@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-16T09:04:10.150Z</updated>
+    <updated>2020-01-17T01:59:42.392Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu18.04基本配置]]></title>
+        <id>https://jackstrom0904.github.io/post/ubuntu1804-ji-ben-pei-zhi</id>
+        <link href="https://jackstrom0904.github.io/post/ubuntu1804-ji-ben-pei-zhi">
+        </link>
+        <updated>2020-01-17T01:17:55.000Z</updated>
+        <summary type="html"><![CDATA[<p>1.安装ssh</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1.安装ssh</p>
+<!-- more -->
+<p>sudo apt-get update<br>
+sudo apt-get install openssh-service<br>
+sudo service ssh start</p>
+ <!-- more -->
+<p>2.root登录</p>
+<!-- more -->
+<p>root@bt:~# sudo passwd root #设置root密码<br>
+root@bt:/opt#vim  /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf<br>
+加入到文件末尾<br>
+greeter-show-manual-login=true<br>
+all-guest=false<br>
+root@bt:/opt# vim /etc/pam.d/gdm-autologin<br>
+#注释auth required pam_success_if.so user!=root quiet_success<br>
+root@bt:/opt# vim /etc/pam.d/gdm-password<br>
+#注释auth required pam_success_if.so user!=root quiet_success<br>
+root@bt:/opt# vim /root/.profile<br>
+将尾行修改成tty -s &amp;&amp; mesg n || true</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[甲方安全建设之路]]></title>
         <id>https://jackstrom0904.github.io/post/jia-fang-an-quan-jian-she-zhi-lu</id>
