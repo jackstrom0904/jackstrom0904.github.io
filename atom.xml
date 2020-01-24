@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-19T12:16:09.604Z</updated>
+    <updated>2020-01-24T11:09:52.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[2020除夕夜随笔]]></title>
+        <id>https://jackstrom0904.github.io/post/2020-chu-xi-ye-sui-bi</id>
+        <link href="https://jackstrom0904.github.io/post/2020-chu-xi-ye-sui-bi">
+        </link>
+        <updated>2020-01-24T10:17:33.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>本来按照原计划除夕过后、来一场说走就走旅程、但是由于病毒的缘故、计划彻底泡汤。只能乖乖的呆在家里。
+在即将逝去的除夕夜、2020相对而言对我来将更是一个挑战、这一年按照原计划中应该会有新的变动、希望在新的变动中能有些感情、可能是习惯了充满感情的环境。至少有一天离开之后、至少还不会彻底像断了线的风筝、最起码还能出来聊聊天、笑谈人生😁。
+半年时间、一座新城、一切从零开始这应该是2019年终的总结。2020希望诸事顺利、不能在执迷不悟了。
+WH事件逐渐让我明白、最喜欢的永远都是见一面、少一面。可惜.......
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu-Metasploit]]></title>
         <id>https://jackstrom0904.github.io/post/ubuntu-metasploit</id>
