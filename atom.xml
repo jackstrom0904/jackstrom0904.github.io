@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-24T11:15:01.764Z</updated>
+    <updated>2020-01-25T08:41:18.952Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
-    <subtitle>所有的对与错，从此以后统统变成Error404...</subtitle>
+    <subtitle>总笑它人傻、到了最后才发现自己才是名副其实的傻子</subtitle>
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
     <entry>
         <title type="html"><![CDATA[2020除夕夜随笔]]></title>
-        <id>https://jackstrom0904.github.io/post/2020-chu-xi-ye-sui-bi</id>
-        <link href="https://jackstrom0904.github.io/post/2020-chu-xi-ye-sui-bi">
+        <id>https://jackstrom0904.github.io/2020-chu-xi-ye-sui-bi</id>
+        <link href="https://jackstrom0904.github.io/2020-chu-xi-ye-sui-bi">
         </link>
         <updated>2020-01-24T10:17:33.000Z</updated>
         <content type="html"><![CDATA[<pre><code>本来按照原计划除夕过后、来一场说走就走旅程、但是由于病毒的缘故、计划彻底泡汤。只能乖乖的呆在家里。
@@ -26,8 +26,8 @@ WH事件逐渐让我明白、最喜欢的永远都是见一面、少一面。可
     </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu-Metasploit]]></title>
-        <id>https://jackstrom0904.github.io/post/ubuntu-metasploit</id>
-        <link href="https://jackstrom0904.github.io/post/ubuntu-metasploit">
+        <id>https://jackstrom0904.github.io/ubuntu-metasploit</id>
+        <link href="https://jackstrom0904.github.io/ubuntu-metasploit">
         </link>
         <updated>2020-01-17T02:18:51.000Z</updated>
         <content type="html"><![CDATA[<p><strong>1.Metasploit</strong><br>
@@ -52,8 +52,8 @@ root@bt:# apt-get install hydra -y</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu18.04基本配置]]></title>
-        <id>https://jackstrom0904.github.io/post/ubuntu1804-ji-ben-pei-zhi</id>
-        <link href="https://jackstrom0904.github.io/post/ubuntu1804-ji-ben-pei-zhi">
+        <id>https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi</id>
+        <link href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">
         </link>
         <updated>2020-01-17T01:17:55.000Z</updated>
         <summary type="html"><![CDATA[<p>1.安装ssh</p>
@@ -82,8 +82,8 @@ root@bt:/opt# vim /root/.profile<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[甲方安全建设之路]]></title>
-        <id>https://jackstrom0904.github.io/post/jia-fang-an-quan-jian-she-zhi-lu</id>
-        <link href="https://jackstrom0904.github.io/post/jia-fang-an-quan-jian-she-zhi-lu">
+        <id>https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu</id>
+        <link href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
         </link>
         <updated>2020-01-16T04:38:24.000Z</updated>
         <content type="html"><![CDATA[<p>此文源于前几天参加的某局的会议、一些心得及总结。<br>
@@ -100,8 +100,8 @@ root@bt:/opt# vim /root/.profile<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[别了朋友、江湖再见]]></title>
-        <id>https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926</id>
-        <link href="https://jackstrom0904.github.io/post/bie-liao-peng-you-jiang-hu-zai-jian-0926">
+        <id>https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926</id>
+        <link href="https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926">
         </link>
         <updated>2020-01-14T02:58:34.000Z</updated>
         <content type="html"><![CDATA[<pre><code>    原以为对待朋友同事只要你用心的付出了、就能得到相等的对待、但是由于时间的摧残流逝、渐渐的明白了原来做人不可以在那么实在了。
