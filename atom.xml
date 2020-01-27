@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-25T09:09:42.578Z</updated>
+    <updated>2020-01-27T01:28:53.103Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -31,7 +31,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[渗透测试工具之SQLMAP神器]]></title>
+        <title type="html"><![CDATA[渗透测试工具之Sqlmap]]></title>
         <id>https://jackstrom0904.github.io/SNQOq63GI</id>
         <link href="https://jackstrom0904.github.io/SNQOq63GI">
         </link>
