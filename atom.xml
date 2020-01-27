@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-27T01:28:53.103Z</updated>
+    <updated>2020-01-27T01:56:32.130Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,46 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[开源蜜罐之HFish部署]]></title>
+        <id>https://jackstrom0904.github.io/5J3Cs3gZQ</id>
+        <link href="https://jackstrom0904.github.io/5J3Cs3gZQ">
+        </link>
+        <updated>2020-01-27T01:37:32.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 蜜罐介绍<br>
+蜜罐技术本质上是一种对攻击方进行欺骗的技术，通过布置一些作为诱饵的主机、网络服务或者信息，诱使攻击方对它们实施攻击，从而可以对攻击行为进行捕获和分析，了解攻击方所使用的工具与方法，推测攻击意图和动机，能够让防御方清晰地了解他们所面对的安全威胁，并通过技术和管理手段来增强实际系统的安全防护能力。<br>
+0x02 蜜罐部署<br>
+安装过程<br>
+https://github.com/hacklcx/HFish/releases #下载对应的安装包<br>
+<img src="https://jackstrom0904.github.io/post-images/1580089301747.png" alt="" loading="lazy"><br>
+上述图片作者基于各个版本封装的安装包<br>
+root@bt:/# wget https://github.com/hacklcx/HFish/releases/download/0.5/HFish-0.5-linux-amd64.tar.gz #使用wget下载安装包<br>
+<img src="https://jackstrom0904.github.io/post-images/1580089472470.png" alt="" loading="lazy"><br>
+root@bt:/# tar zxvf HFish-0.5-linux-amd64.tar.gz #解压文件<br>
+root@bt:/# cd HFish-0.5-linux-amd64 #进入目录<br>
+root@bt:/HFish-0.5-linux-amd64# ls -l   # 目录说明<br>
+总用量 18236<br>
+drwxr-xr-x 2 root root     4096 12月  3 21:11 admin<br>
+-rw-r--r-- 1 root root     5236 11月 28 21:35 config.ini #核心配置文件<br>
+drwxr-xr-x 3 root root     4096 12月  3 21:11 db<br>
+-rwxr-xr-x 1 root root 18590216 12月  3 20:32 HFish #启动文件<br>
+drwxr-xr-x 2 root root     4096 12月  3 21:11 images<br>
+drwxr-xr-x 4 root root     4096 12月  3 21:11 libs<br>
+-rw-r--r-- 1 root root    35148 9月   8 23:43 LICENSE<br>
+drwxr-xr-x 2 root root     4096 12月  2 17:22 logs<br>
+-rw-r--r-- 1 root root     5812 12月  3 20:58 README.md<br>
+drwxr-xr-x 8 root root     4096 12月  3 21:11 static<br>
+drwxr-xr-x 4 root root     4096 8月  10 17:37 web<br>
+root@bt:/HFish-0.5-linux-amd64# ./HFish #启动程序默认管理端口为9001<br>
+<img src="https://jackstrom0904.github.io/post-images/1580089788509.png" alt="" loading="lazy"><br>
+0x03 访问HFISH<br>
+http://192.168.188.134:9001/login  #IP地址为安装机器的地址<br>
+<img src="https://jackstrom0904.github.io/post-images/1580090009141.png" alt="" loading="lazy"><br>
+默认登录用户名与密码为admin&amp;&amp;admin<br>
+配置文件可进行修改<br>
+<img src="https://jackstrom0904.github.io/post-images/1580090097723.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[渗透测试之Nmap]]></title>
         <id>https://jackstrom0904.github.io/Wm37OF_ZL</id>

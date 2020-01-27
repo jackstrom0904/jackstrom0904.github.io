@@ -1,8 +1,8 @@
 <html>
   <head>
-    <meta charset="UTF-8"/>
+      <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>甲方安全建设之路 | Error404</title>
+<title>Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1580090185390">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,8 +17,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="甲方安全建设之路" />
-    <meta name="keywords" content="" />
+      <meta name="description" content="总笑它人傻、到了最后才发现自己才是名副其实的傻子">
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -102,14 +101,8 @@
       
       <div class="section-layout gemini">
         <div class="section-layout-wrapper">
-          
-<div class="sidebar">
-    <div class="sidebar-box right-motion" id="sidebar">
-      
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          <div class="sidebar-wrapper">
+          <div class="sidebar">
+    <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://jackstrom0904.github.io/images/avatar.png"/>
     <p class="site-author-name">Error404</p>
@@ -161,163 +154,64 @@
     </div>
   
 </div>
-        
-      </div>
-    </div>
 </div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-  let hasFix = false;
-
-  if (!sidebarBody.classList.contains('muse')) {
-    window.addEventListener('scroll', function(e) {
-    if (document.body.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
-    }
-  });
-  }
-  
-</script>
           <div class="section-box">
-            <div class="section post">
-              <div class="article-box">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
-      甲方安全建设之路
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-01-16</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>452<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-</div>
-              <div class="post-body next-md-body" id="post_body">
-                <p>此文源于前几天参加的某局的会议、一些心得及总结。<br>
-1.安全不等于设备数量<br>
-目前部分企业的安全建设之路，最喜欢的就是大量采购安全设备(FW，IDS、IPS、DDOS)。HW期间其实是最好的一个证明、安全不等于设备数量。本质上来说安全设备还是有存在的意义、但是为何HW期间<br>
-叠加的安全设备、为何还能被突破。个人认为问题出现在以下几个点、安全策略梳理周期、补丁版本更新周期、设备是否专业人士维护。<br>
-2.弱口令如何终结<br>
-弱口令应该属于一个老生常谈的话题、但为何还会频繁发生。个人认为主要以下2个点：管理制度是否具备、技术上是否对弱口令进行把控。<br>
-3.资产管理的重要性<br>
-资产的重要性、应该在只有在国内近几年HW行动期间才会得重视、但是真正的HW阶段依旧会发现部分企业资产确实很乱，举个栗子：某子站已被拿下权限、蓝方会得花部分时间来查找对应的设备、但是从红蓝对抗的角度上来、部分企业的内网限制比较松散、一旦打点成功、这个时间足够横向突破内网。</p>
-<pre><code>安全建设之路，确实需要很长的一段时间、安全的维度是业务安全稳定的运行。安全的维度不在是把设备作为主、更多的是根据自身的业务体系、完善各种管理机制、并且在企业中融入各类开源类安全产品进行二次开发完善。
-</code></pre>
-
-              </div>
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      Error404
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu" title="甲方安全建设之路">甲方安全建设之路</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，转载请注明出处！
-    </li>
-  </ul>
-  <div class="tags">
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">Ubuntu18.04基本配置</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">上一篇</a>
-      
+            <section class="section posts-expand">
+              <div class="tag-timeline-box">
+  <div class="tag-timeline-wrapper">
+    <div class="tag-timeline-title">
+      <h2>
+        红蓝对抗
+        <small>标签</small>
+      </h2>
     </div>
-    <div class="nav-next">
+    
       
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926">别了朋友、江湖再见</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
-</div>
-              
+        
+          <a href="https://jackstrom0904.github.io/5J3Cs3gZQ">
+            <div class="motion-warpper">
+              <div class="tag-post-node">
+                <h1>
+                  01-27
+                  <small>开源蜜罐之HFish部署</small>
+                </h1>
+              </div>  
             </div>
+          </a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+            </section>
           </div>
         </div>
       </div>
