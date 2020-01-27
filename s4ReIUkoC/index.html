@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>甲方安全建设之路 | Error404</title>
+<title>渗透测试框架之TrackRay | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1580094854365">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,8 +17,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="甲方安全建设之路" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="渗透测试框架之TrackRay" />
+    <meta name="keywords" content="红蓝对抗" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -245,40 +245,95 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
-      甲方安全建设之路
+    <a class="post-title-link" href="https://jackstrom0904.github.io/s4ReIUkoC">
+      渗透测试框架之TrackRay
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-16</span>
+      <span>2020-01-27</span>
     </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
+              <span>红蓝对抗</span>
+            </a>
+          
+        
+      </span>
+      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>452<span class="pc-show">字数</span></span>
+      <span>576<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>此文源于前几天参加的某局的会议、一些心得及总结。<br>
-1.安全不等于设备数量<br>
-目前部分企业的安全建设之路，最喜欢的就是大量采购安全设备(FW，IDS、IPS、DDOS)。HW期间其实是最好的一个证明、安全不等于设备数量。本质上来说安全设备还是有存在的意义、但是为何HW期间<br>
-叠加的安全设备、为何还能被突破。个人认为问题出现在以下几个点、安全策略梳理周期、补丁版本更新周期、设备是否专业人士维护。<br>
-2.弱口令如何终结<br>
-弱口令应该属于一个老生常谈的话题、但为何还会频繁发生。个人认为主要以下2个点：管理制度是否具备、技术上是否对弱口令进行把控。<br>
-3.资产管理的重要性<br>
-资产的重要性、应该在只有在国内近几年HW行动期间才会得重视、但是真正的HW阶段依旧会发现部分企业资产确实很乱，举个栗子：某子站已被拿下权限、蓝方会得花部分时间来查找对应的设备、但是从红蓝对抗的角度上来、部分企业的内网限制比较松散、一旦打点成功、这个时间足够横向突破内网。</p>
-<pre><code>安全建设之路，确实需要很长的一段时间、安全的维度是业务安全稳定的运行。安全的维度不在是把设备作为主、更多的是根据自身的业务体系、完善各种管理机制、并且在企业中融入各类开源类安全产品进行二次开发完善。
-</code></pre>
+                <p>0x01 TrackRay介绍<br>
+溯光，英文名“TrackRay”，意为逆光而行，追溯光源。同时致敬安全圈前辈开发的“溯雪”，“流光<br>
+溯光是一个开源的插件化渗透测试框架，框架自身实现了漏洞扫描功能，集成了知名安全工具：Metasploit、Nmap、Sqlmap、AWVS等。<br>
+溯光使用 Java 编写，SpringBoot 作为基础框架，JPA + HSQLDB嵌入式数据库做持久化，Maven 管理依赖，Jython 实现 Python 插件调用，quartz 做任务调度，freemarker 做视图层，Websocket 实现命令行式插件交互。框架可扩展性高，支持 Java、Python、JSON 等方式编写插件，有“漏洞扫描插件”、“爬虫插件”、“独立应用插件”、“内部插件”、“无交互插件”和“可交互插件” 等插件类型。<br>
+项目地址：https://github.com/iSafeBlue/TrackRay<br>
+0x02 TrackRay依赖环境<br>
+JDK 1.8<br>
+Python 2.7<br>
+Maven<br>
+Git<br>
+Metasploit<br>
+Nmap(建议安装)<br>
+SQLMAP(建议安装)<br>
+AWVS<br>
+说明：由于个人环境已部署了部分环境、故此无法记录所有的安装过程<br>
+<strong>root@bt:/# java -version</strong> #已安装<br>
+openjdk version &quot;1.8.0_232&quot;<br>
+OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-0ubuntu1~18.04.1-b09)<br>
+OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)<br>
+**root@bt:/# python2.7 **#已安装<br>
+Python 2.7.17 (default, Nov  7 2019, 10:07:09)<br>
+root@bt:/# git #已安装<br>
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]<br>
+[--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]<br>
+[-p | --paginate | --no-pager] [--no-replace-objects] [--bare]<br>
+[--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]<br>
+<command> [<args>]<br>
+**root@bt:/# nmap **#已安装<br>
+Nmap 7.60 ( https://nmap.org )<br>
+Usage: nmap [Scan Type(s)] [Options] {target specification}<br>
+TARGET SPECIFICATION:<br>
+**root@bt:/# msfconsole ** #msf已安装<br>
+[-] ***rting the Metasploit Framework console...<br>
+[-] * WARNING: No database support: No database YAML file<br>
+[-] ***<br>
+####sqlmap安装####<br>
+root@bt:/opt# git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev #安装sqlmap<br>
+root@bt:/opt# cd sqlmap-dev/ #进入sql目录<br>
+root@bt:/opt/sqlmap-dev# pwd #获取路径信息<br>
+/opt/sqlmap-dev<br>
+root@bt:/opt/sqlmap-dev# vim /etc/profile #将SQLMAP路径加入到环境变量<br>
+export PATH=/opt/sqlmap-dev:$PATH<br>
+root@bt:/opt/sqlmap-dev# python sqlmap.py  #部署完成<br>
+sqlmap.py: error: missing a mandatory option (-d, -u, -l, -m, -r, -g, -c, --list-tampers, --wizard, --update, --purge or --dependencies). Use -h for basic and -hh for advanced help<br>
+#####AWVS安装#####<br>
+root@bt:/# apt-get install libxdamage1 libgtk-3-0 libasound2 libnss3 libxss1 libx11-xcb-dev -y #安装依赖<br>
+root@bt:/opt/wvs# ./acunetix_trial.sh #安装官方程序 按照信息输入即可<br>
+root@bt:/opt/wvs# cp patch_awvs /home/acunetix/.acunetix_trial/v_190927120/scanner/ #将破解补丁拷贝到安装目录</p>
+<p>0x03<br>
+0x04<br>
+0x05</p>
 
               </div>
               <div class="post-footer">
@@ -289,7 +344,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu" title="甲方安全建设之路">甲方安全建设之路</a>
+      <a href="https://jackstrom0904.github.io/s4ReIUkoC" title="渗透测试框架之TrackRay">渗透测试框架之TrackRay</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -298,19 +353,17 @@
   </ul>
   <div class="tags">
     
+      <a href="https://jackstrom0904.github.io/x4l8rqWJg"># 红蓝对抗</a>
+    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">Ubuntu18.04基本配置</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926">别了朋友、江湖再见</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/bie-liao-peng-you-jiang-hu-zai-jian-0926">下一篇</a>
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/5J3Cs3gZQ">开源蜜罐之HFish部署</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/5J3Cs3gZQ">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

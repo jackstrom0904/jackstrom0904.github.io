@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-27T01:56:32.130Z</updated>
+    <updated>2020-01-27T03:14:30.678Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[渗透测试框架之TrackRay]]></title>
+        <id>https://jackstrom0904.github.io/s4ReIUkoC</id>
+        <link href="https://jackstrom0904.github.io/s4ReIUkoC">
+        </link>
+        <updated>2020-01-27T02:14:19.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 TrackRay介绍<br>
+溯光，英文名“TrackRay”，意为逆光而行，追溯光源。同时致敬安全圈前辈开发的“溯雪”，“流光<br>
+溯光是一个开源的插件化渗透测试框架，框架自身实现了漏洞扫描功能，集成了知名安全工具：Metasploit、Nmap、Sqlmap、AWVS等。<br>
+溯光使用 Java 编写，SpringBoot 作为基础框架，JPA + HSQLDB嵌入式数据库做持久化，Maven 管理依赖，Jython 实现 Python 插件调用，quartz 做任务调度，freemarker 做视图层，Websocket 实现命令行式插件交互。框架可扩展性高，支持 Java、Python、JSON 等方式编写插件，有“漏洞扫描插件”、“爬虫插件”、“独立应用插件”、“内部插件”、“无交互插件”和“可交互插件” 等插件类型。<br>
+项目地址：https://github.com/iSafeBlue/TrackRay<br>
+0x02 TrackRay依赖环境<br>
+JDK 1.8<br>
+Python 2.7<br>
+Maven<br>
+Git<br>
+Metasploit<br>
+Nmap(建议安装)<br>
+SQLMAP(建议安装)<br>
+AWVS<br>
+说明：由于个人环境已部署了部分环境、故此无法记录所有的安装过程<br>
+<strong>root@bt:/# java -version</strong> #已安装<br>
+openjdk version &quot;1.8.0_232&quot;<br>
+OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-0ubuntu1~18.04.1-b09)<br>
+OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)<br>
+**root@bt:/# python2.7 **#已安装<br>
+Python 2.7.17 (default, Nov  7 2019, 10:07:09)<br>
+root@bt:/# git #已安装<br>
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]<br>
+[--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]<br>
+[-p | --paginate | --no-pager] [--no-replace-objects] [--bare]<br>
+[--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]<br>
+<command> [<args>]<br>
+**root@bt:/# nmap **#已安装<br>
+Nmap 7.60 ( https://nmap.org )<br>
+Usage: nmap [Scan Type(s)] [Options] {target specification}<br>
+TARGET SPECIFICATION:<br>
+**root@bt:/# msfconsole ** #msf已安装<br>
+[-] ***rting the Metasploit Framework console...<br>
+[-] * WARNING: No database support: No database YAML file<br>
+[-] ***<br>
+####sqlmap安装####<br>
+root@bt:/opt# git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev #安装sqlmap<br>
+root@bt:/opt# cd sqlmap-dev/ #进入sql目录<br>
+root@bt:/opt/sqlmap-dev# pwd #获取路径信息<br>
+/opt/sqlmap-dev<br>
+root@bt:/opt/sqlmap-dev# vim /etc/profile #将SQLMAP路径加入到环境变量<br>
+export PATH=/opt/sqlmap-dev:$PATH<br>
+root@bt:/opt/sqlmap-dev# python sqlmap.py  #部署完成<br>
+sqlmap.py: error: missing a mandatory option (-d, -u, -l, -m, -r, -g, -c, --list-tampers, --wizard, --update, --purge or --dependencies). Use -h for basic and -hh for advanced help<br>
+#####AWVS安装#####<br>
+root@bt:/# apt-get install libxdamage1 libgtk-3-0 libasound2 libnss3 libxss1 libx11-xcb-dev -y #安装依赖<br>
+root@bt:/opt/wvs# ./acunetix_trial.sh #安装官方程序 按照信息输入即可<br>
+root@bt:/opt/wvs# cp patch_awvs /home/acunetix/.acunetix_trial/v_190927120/scanner/ #将破解补丁拷贝到安装目录</p>
+<p>0x03<br>
+0x04<br>
+0x05</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[开源蜜罐之HFish部署]]></title>
         <id>https://jackstrom0904.github.io/5J3Cs3gZQ</id>
