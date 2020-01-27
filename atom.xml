@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-27T03:15:36.478Z</updated>
+    <updated>2020-01-27T08:45:22.436Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,71 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[巡风内网应急系统]]></title>
+        <id>https://jackstrom0904.github.io/r5qRundLE</id>
+        <link href="https://jackstrom0904.github.io/r5qRundLE">
+        </link>
+        <updated>2020-01-27T05:27:20.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 巡风介绍<br>
+巡风是一款适用于企业内网的漏洞快速应急、巡航扫描系统，通过搜索功能可清晰的了解内部网络资产分布情况，并且可指定漏洞插件对搜索结果进行快速漏洞检测并输出结果报表<br>
+0x02 巡风安装<br>
+#修改时区<br>
+root@bt:/opt# echo TZ='Asia/Shanghai'; export TZ &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile<br>
+#操作系统依赖<br>
+root@bt:/opt# apt-get update<br>
+root@bt:/opt# apt-get install gcc libssl-dev libffi-dev python-dev libpcap-dev<br>
+#python依赖库<br>
+root@bt:/opt#wget https://sec.ly.com/mirror/get-pip.py --no-check-certificate<br>
+root@bt:/opt#python get-pip.py<br>
+#安装数据库<br>
+导入包管理系统使用的公钥<br>
+root@bt:/opt#wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -<br>
+gnupg使用以下命令安装及其所需的库<br>
+root@bt:/opt#sudo apt-get install gnupg<br>
+安装完成后，重试导入密钥<br>
+root@bt:/wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -<br>
+Ubuntu 18.04（Bionic）创建列表文件<br>
+root@bt:/echo &quot;deb [ arch=amd64 ] http://repo.mongodb.com/apt/ubuntu bionic/mongodb-enterprise/4.2 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list<br>
+重新加载本地软件包数据库<br>
+root@bt:/opt#apt-get update<br>
+安装MongoDB<br>
+root@bt:/opt#sudo apt-get install -y mongodb-enterprise<br>
+启动数据库<br>
+root@bt:/opt#service mongod start<br>
+mongodb添加认证<br>
+root@bt:/opt# mongo</p>
+<blockquote>
+<p>use xunfeng<br>
+db.createUser({user:'scan',pwd:'123456',roles:[{role:'dbOwner',db:'xunfeng'}]})<br>
+exit<br>
+下载巡风<br>
+root@bt:/opt# git clone https://github.com/ysrc/xunfeng.git<br>
+root@bt:/opt/xunfeng/db# pwd #进入数据库文件夹<br>
+/opt/xunfeng/db<br>
+root@bt:/opt/xunfeng/db# mongorestore -h 127.0.0.1 --port 27017 -d xunfeng . #导入数据库<br>
+root@bt:/opt/xunfeng# pwd # 安装python相关依赖<br>
+/opt/xunfeng<br>
+root@bt:/opt/xunfeng# pip install -r requirements.txt<br>
+修改配置文件<br>
+root@bt:/opt/xunfeng# vim Config.py<br>
+class Config(object):<br>
+ACCOUNT = 'admin'   #后台登录用户名<br>
+PASSWORD = 'xunfeng321'#用户密码<br>
+class ProductionConfig(Config):<br>
+DB = '127.0.0.1'<br>
+PORT = 65521<br>
+DBUSERNAME = 'scan'<br>
+DBPASSWORD = '123456'<br>
+DBNAME = 'xunfeng'<br>
+#启动巡风<br>
+root@bt:/opt/xunfeng# chmod +x *<br>
+root@bt:/opt/xunfeng# ./Run.sh<br>
+程序部署完成<br>
+<img src="https://jackstrom0904.github.io/post-images/1580114699144.png" alt="" loading="lazy"></p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[渗透测试框架之TrackRay]]></title>
         <id>https://jackstrom0904.github.io/s4ReIUkoC</id>
