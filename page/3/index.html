@@ -1,8 +1,8 @@
 <html>
   <head>
-    <meta charset="UTF-8"/>
+      <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>巡风内网应急系统 | Error404</title>
+<title>Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1580444068854">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,13 +17,13 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="巡风内网应急系统" />
-    <meta name="keywords" content="红蓝对抗" />
+      <meta name="description" content="总笑它人傻、到了最后才发现自己才是名副其实的傻子">
   </head>
   <body>
     <div class="head-top-line"></div>
-    <div class="header-box">
-      
+    <div class="viewport">
+      <div class="header-box">
+        
 <div class=" gemini">
   <header class="header">
     <div class="blog-header" id="header">
@@ -97,19 +97,13 @@
 
   navToggle.addEventListener('click',navClick);  
 </script>
-    </div>
-    <div class="main-continer">
-      
-      <div class="section-layout gemini">
-        <div class="section-layout-wrapper">
-          
-<div class="sidebar">
-    <div class="sidebar-box right-motion" id="sidebar">
-      
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
+      </div>
+      <div class="main-continer">
         
-          <div class="sidebar-wrapper">
+        <div class="section-layout gemini">
+          <div class="section-layout-wrapper">
+            <div class="sidebar">
+    <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://jackstrom0904.github.io/images/avatar.png"/>
     <p class="site-author-name">Error404</p>
@@ -161,231 +155,93 @@
     </div>
   
 </div>
-        
-      </div>
-    </div>
 </div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-  let hasFix = false;
-
-  if (!sidebarBody.classList.contains('muse')) {
-    window.addEventListener('scroll', function(e) {
-    if (document.body.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
-    }
-  });
-  }
-  
-</script>
-          <div class="section-box">
-            <div class="section post">
-              <div class="article-box">
+            <div class="section-box">
+              <section class="section posts-expand slide-down-in">
+                
+  <article class="post-list-box post">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/r5qRundLE">
-      巡风内网应急系统
+    <a class="post-title-link" href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
+      甲方安全建设之路
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-27</span>
+      <span>2020-01-16</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
-              <span>红蓝对抗</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>3分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>510<span class="pc-show">字数</span></span>
+      <span>452<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
-</div>
-              <div class="post-body next-md-body" id="post_body">
-                <p>0x01 巡风介绍<br>
-巡风是一款适用于企业内网的漏洞快速应急、巡航扫描系统，通过搜索功能可清晰的了解内部网络资产分布情况，并且可指定漏洞插件对搜索结果进行快速漏洞检测并输出结果报表<br>
-0x02 巡风安装<br>
-#修改时区<br>
-root@bt:/opt# echo TZ='Asia/Shanghai'; export TZ &gt;&gt; ~/.bash_profile &amp;&amp; source ~/.bash_profile<br>
-#操作系统依赖<br>
-root@bt:/opt# apt-get update<br>
-root@bt:/opt# apt-get install gcc libssl-dev libffi-dev python-dev libpcap-dev<br>
-#python依赖库<br>
-root@bt:/opt#wget https://sec.ly.com/mirror/get-pip.py --no-check-certificate<br>
-root@bt:/opt#python get-pip.py<br>
-#安装数据库<br>
-导入包管理系统使用的公钥<br>
-root@bt:/opt#wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -<br>
-gnupg使用以下命令安装及其所需的库<br>
-root@bt:/opt#sudo apt-get install gnupg<br>
-安装完成后，重试导入密钥<br>
-root@bt:/wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -<br>
-Ubuntu 18.04（Bionic）创建列表文件<br>
-root@bt:/echo &quot;deb [ arch=amd64 ] http://repo.mongodb.com/apt/ubuntu bionic/mongodb-enterprise/4.2 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-enterprise.list<br>
-重新加载本地软件包数据库<br>
-root@bt:/opt#apt-get update<br>
-安装MongoDB<br>
-root@bt:/opt#sudo apt-get install -y mongodb-enterprise<br>
-启动数据库<br>
-root@bt:/opt#service mongod start<br>
-mongodb添加认证<br>
-root@bt:/opt# mongo</p>
-<blockquote>
-<p>use xunfeng<br>
-db.createUser({user:'scan',pwd:'123456',roles:[{role:'dbOwner',db:'xunfeng'}]})<br>
-exit<br>
-下载巡风<br>
-root@bt:/opt# git clone https://github.com/ysrc/xunfeng.git<br>
-root@bt:/opt/xunfeng/db# pwd #进入数据库文件夹<br>
-/opt/xunfeng/db<br>
-root@bt:/opt/xunfeng/db# mongorestore -h 127.0.0.1 --port 27017 -d xunfeng . #导入数据库<br>
-root@bt:/opt/xunfeng# pwd # 安装python相关依赖<br>
-/opt/xunfeng<br>
-root@bt:/opt/xunfeng# pip install -r requirements.txt<br>
-修改配置文件<br>
-root@bt:/opt/xunfeng# vim Config.py<br>
-class Config(object):<br>
-ACCOUNT = 'admin'   #后台登录用户名<br>
-PASSWORD = 'xunfeng321'#后台用户密码<br>
-class ProductionConfig(Config):<br>
-DB = '127.0.0.1'<br>
-PORT = 27017<br>
-DBUSERNAME = 'scan'<br>
-DBPASSWORD = '123456'<br>
-DBNAME = 'xunfeng'<br>
-#启动巡风<br>
-root@bt:/opt/xunfeng# chmod +x *<br>
-root@bt:/opt/xunfeng# ./Run.sh<br>
-程序部署完成<br>
-<img src="https://jackstrom0904.github.io/post-images/1580114699144.png" alt="" loading="lazy"></p>
-</blockquote>
-<p>注：程序基于Py2开发、此处有坑</p>
-
-              </div>
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      Error404
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/r5qRundLE" title="巡风内网应急系统">巡风内网应急系统</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，转载请注明出处！
-    </li>
+    <div class="post-body">
+      
+        
+          
+          
+        
+      
+      
+      <div class="post-button text-center">
+        <a class="btn" href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu" rel="contents">
+          阅读全文 »
+        </a>
+      </div>
+      
+    </div>
+    
+  </article>
+  
+                
+                
+<div class="page">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://jackstrom0904.github.io/page/2/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      
+        <li class="pagination-li ">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/2">
+              2
+            </a>
+        </li>
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/3">
+              3
+            </a>
+        </li>
+      
+    
+    
   </ul>
-  <div class="tags">
-    
-      <a href="https://jackstrom0904.github.io/x4l8rqWJg"># 红蓝对抗</a>
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/-pVnkl78L">20200129</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/-pVnkl78L">上一篇</a>
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/s4ReIUkoC">渗透测试框架之TrackRay</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/s4ReIUkoC">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
 </div>
-              
+              </section>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-box">
+        <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
       © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
@@ -510,6 +366,7 @@ root@bt:/opt/xunfeng# ./Run.sh<br>
   // 代码高亮
   hljs.initHighlightingOnLoad();
 </script>
+      </div>
     </div>
   </body>
   <script src="/media/js/motion.js"></script>

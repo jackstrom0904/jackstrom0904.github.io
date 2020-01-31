@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-29T12:41:07.145Z</updated>
+    <updated>2020-01-31T04:14:35.569Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[IISPUT上传漏洞]]></title>
+        <id>https://jackstrom0904.github.io/MA8A5SdC7</id>
+        <link href="https://jackstrom0904.github.io/MA8A5SdC7">
+        </link>
+        <updated>2020-01-31T03:50:46.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 漏洞原理<br>
+WebDAV （Web-based Distributed Authoring and Versioning） 是一种HTTP1.1的扩展协议。它扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使应用程序可对Web Server直接读写，并支持写文件锁定(Locking)及解锁(Unlock)，还可以支持文件的版本控制。可以像在操作本地文件夹一样操作服务器上的文件夹，该扩展也存在缺陷，可以被恶意攻击者利用，直接上传恶意文件。<br>
+0x02 漏洞利用<br>
+<img src="https://jackstrom0904.github.io/post-images/1580442967732.png" alt="" loading="lazy"><br>
+选中存在漏洞的站点、点击上传<br>
+<img src="https://jackstrom0904.github.io/post-images/1580443089746.png" alt="" loading="lazy"><br>
+利用option方法查看服务器支持的方法.<br>
+<img src="https://jackstrom0904.github.io/post-images/1580443247961.png" alt="" loading="lazy"><br>
+利用put方法上传一个包含一句话的txt、然后提交数据包<br>
+<img src="https://jackstrom0904.github.io/post-images/1580444016722.png" alt="" loading="lazy"><br>
+利用webshell连接连接一句话</p>
+<p>0x03 修复建议<br>
+建议关闭不安全的http方法、仅保留POST与GET方法。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20200129]]></title>
         <id>https://jackstrom0904.github.io/-pVnkl78L</id>
