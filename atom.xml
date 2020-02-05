@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-01-31T04:21:15.537Z</updated>
+    <updated>2020-02-05T05:02:54.535Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Cenos7.3--Beef安装过程]]></title>
+        <id>https://jackstrom0904.github.io/DDddP9tC2</id>
+        <link href="https://jackstrom0904.github.io/DDddP9tC2">
+        </link>
+        <updated>2020-02-05T04:32:07.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 环境说明<br>
+Linux-cetos7.3[国外VPS]<br>
+[root@localhost beef]# cat /etc/redhat-release<br>
+CentOS Linux release 7.3.1611 (Core)<br>
+0x02 安装过程记录<br>
+安装ruby：beef环境要求ruby&gt;2.5<br>
+[root@bt /]# yum install -y gcc*<br>
+[root@bt /]# wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.gz<br>
+[root@bt /]# tar zxvf ruby-2.5.7.tar.gz<br>
+[root@bt /]#  cd ruby-2.5.7<br>
+[root@bt /]# ./configure<br>
+[root@bt /]# make &amp;&amp; make install<br>
+[root@bt /]# vim /etc/profile  #将ruby加入到环境变量<br>
+[root@bt /]# source /etc/profile<br>
+[root@bt /]#ruby -v #出现版本号代表安装成功<br>
+安装beef<br>
+[root@bt /]git clone https://github.com/beefproject/beef.git<br>
+[root@bt /]cd beef<br>
+[root@bt /]./install #ruby满足要求后程序将自动安装<br>
+[root@bt /]./beef #第一次程序启动<br>
+<img src="https://jackstrom0904.github.io/post-images/1580878207374.png" alt="" loading="lazy"><br>
+#根据报错提示为安装nodejs<br>
+[root@bt /] wget  https://npm.taobao.org/mirrors/node/v10.15.3/node-v10.15.3-linux-x64.tar.gz<br>
+[root@bt /] tar zxvf node-v10.15.3-linux-x64.tar.gz<br>
+[root@bt /] mv node-v10.15.3-linux-x64 nodejs<br>
+[root@bt /]vim /etc/profile 将nodejs-bin加入到环境变量<br>
+[root@bt /]source /etc/profile<br>
+[root@bt /]note -v<br>
+[root@bt /]./beef #第二次程序启动<br>
+<img src="https://jackstrom0904.github.io/post-images/1580878522892.png" alt="" loading="lazy"><br>
+#按照报错提示对默认的用户名密码进行修改<br>
+[root@bt /]vim config.yaml<br>
+[root@bt /]./beef #第三次程序启动<br>
+<img src="https://jackstrom0904.github.io/post-images/1580878646268.jpg" alt="" loading="lazy"><br>
+#按照报错提示SQLite版本不符合<br>
+[root@bt /]wget http://www.sqlite.org/2015/sqlite-autoconf-3081101.tar.gz<br>
+[root@bt /]tar zxvf sqlite-autoconf-3081101.tar.gz<br>
+[root@bt /]cd sqlite-autoconf-3081101<br>
+[root@bt /] ./configure<br>
+[root@bt /]make &amp;&amp; make install<br>
+[root@bt /] ldconfig<br>
+[root@bt /] sqlite3 #可看到版本号相关<br>
+[root@bt /]./beef #最后一次成功启动<br>
+0x02 安装完成<br>
+<img src="https://jackstrom0904.github.io/post-images/1580878919066.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IISPUT上传漏洞]]></title>
         <id>https://jackstrom0904.github.io/MA8A5SdC7</id>
