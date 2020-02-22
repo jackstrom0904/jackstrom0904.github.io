@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>甲方安全建设之路 | Error404</title>
+<title>cetos7安装JAVA开发环境 | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1582337524685">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,7 +17,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="甲方安全建设之路" />
+    <meta name="description" content="cetos7安装JAVA开发环境" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -245,15 +245,15 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
-      甲方安全建设之路
+    <a class="post-title-link" href="https://jackstrom0904.github.io/hly_MxoM5">
+      cetos7安装JAVA开发环境
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-16</span>
+      <span>2020-02-22</span>
     </span>
     
     <span class="meta-item">
@@ -263,22 +263,45 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>452<span class="pc-show">字数</span></span>
+      <span>354<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>此文源于前几天参加的某局的会议、一些心得及总结。<br>
-1.安全不等于设备数量<br>
-目前部分企业的安全建设之路，最喜欢的就是大量采购安全设备(FW，IDS、IPS、DDOS)。HW期间其实是最好的一个证明、安全不等于设备数量。本质上来说安全设备还是有存在的意义、但是为何HW期间<br>
-叠加的安全设备、为何还能被突破。个人认为问题出现在以下几个点、安全策略梳理周期、补丁版本更新周期、设备是否专业人士维护。<br>
-2.弱口令如何终结<br>
-弱口令应该属于一个老生常谈的话题、但为何还会频繁发生。个人认为主要以下2个点：管理制度是否具备、技术上是否对弱口令进行把控。<br>
-3.资产管理的重要性<br>
-资产的重要性、应该在只有在国内近几年HW行动期间才会得重视、但是真正的HW阶段依旧会发现部分企业资产确实很乱，举个栗子：某子站已被拿下权限、蓝方会得花部分时间来查找对应的设备、但是从红蓝对抗的角度上来、部分企业的内网限制比较松散、一旦打点成功、这个时间足够横向突破内网。</p>
-<pre><code>安全建设之路，确实需要很长的一段时间、安全的维度是业务安全稳定的运行。安全的维度不在是把设备作为主、更多的是根据自身的业务体系、完善各种管理机制、并且在企业中融入各类开源类安全产品进行二次开发完善。
-</code></pre>
+                <p>0X01 java安装过程<br>
+[root@bt java]# ls -l  #oracle官网已完成下载Jdk<br>
+-rw-r--r--. 1 root root 194545143 2月  22 09:24 jdk-8u241-linux-x64.tar.gz<br>
+[root@bt java]# tar zxvf jdk-8u241-linux-x64.tar.gz  #进行解压<br>
+[root@bt jdk1.8.0_241]# pwd #压缩包解压路径<br>
+/opt/java/jdk1.8.0_241<br>
+[root@bt jdk1.8.0_241]# vim /etc/profile #配置环境变量<br>
+#文件末尾追加<br>
+export JAVA_HOME=/opt/java/jdk1.8.0_241<br>
+export JRE_HOME=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>J</mi><mi>A</mi><mi>V</mi><msub><mi>A</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi></mrow><mi mathvariant="normal">/</mi><mi>j</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>C</mi><mi>L</mi><mi>A</mi><mi>S</mi><mi>S</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">.</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">{JAVA_HOME}/jre
+export CLASSPATH=.:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">L</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">.</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>{JAVA_HOME}/lib:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>J</mi><mi>R</mi><msub><mi>E</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi></mrow><mi mathvariant="normal">/</mi><mi>l</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">{JRE_HOME}/lib
+export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>{JAVA_HOME}/bin:<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 28: …t jdk1.8.0_241]#̲ source /etc/pr…'>PATH
+[root@bt jdk1.8.0_241]# source /etc/profile #环境变量生效
+[root@bt jdk1.8.0_241]# java -version #验证是否安装成功
+java version &quot;1.8.0_241&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+0X01 Maven安装过程
+[root@bt opt]# wget https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz #下载安装包
+[root@bt maven]# tar zxvf apache-maven-3.5.0-bin.tar.gz  #解压
+[root@bt maven]# mv apache-maven-3.5.0 maven #重命名
+[root@bt maven]# pwd #路径信息
+/opt/maven/maven
+[root@bt maven]# vim /etc/profile
+export PATH=/opt/maven/maven/bin:</span>PATH<br>
+[root@bt jdk1.8.0_241]# source /etc/profile #环境变量生效<br>
+[root@bt bin]# mvn  -v #安装成功<br>
+Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2017-04-04T03:39:06+08:00)<br>
+Maven home: /opt/maven/maven<br>
+Java version: 1.8.0_241, vendor: Oracle Corporation<br>
+Java home: /opt/java/jdk1.8.0_241/jre<br>
+Default locale: zh_CN, platform encoding: UTF-8<br>
+OS name: &quot;linux&quot;, version: &quot;3.10.0-862.el7.x86_64&quot;, arch: &quot;amd64&quot;, family: &quot;unix&quot;</p>
 
               </div>
               <div class="post-footer">
@@ -289,7 +312,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu" title="甲方安全建设之路">甲方安全建设之路</a>
+      <a href="https://jackstrom0904.github.io/hly_MxoM5" title="cetos7安装JAVA开发环境">cetos7安装JAVA开发环境</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -302,12 +325,12 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">Ubuntu18.04基本配置</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/ubuntu1804-ji-ben-pei-zhi">上一篇</a>
-      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/DDddP9tC2">Cenos7.3--Beef安装过程</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/DDddP9tC2">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

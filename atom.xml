@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-02-06T05:31:21.341Z</updated>
+    <updated>2020-02-22T02:12:15.113Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[cetos7安装JAVA开发环境]]></title>
+        <id>https://jackstrom0904.github.io/hly_MxoM5</id>
+        <link href="https://jackstrom0904.github.io/hly_MxoM5">
+        </link>
+        <updated>2020-02-22T01:33:15.000Z</updated>
+        <content type="html"><![CDATA[<p>0X01 java安装过程<br>
+[root@bt java]# ls -l  #oracle官网已完成下载Jdk<br>
+-rw-r--r--. 1 root root 194545143 2月  22 09:24 jdk-8u241-linux-x64.tar.gz<br>
+[root@bt java]# tar zxvf jdk-8u241-linux-x64.tar.gz  #进行解压<br>
+[root@bt jdk1.8.0_241]# pwd #压缩包解压路径<br>
+/opt/java/jdk1.8.0_241<br>
+[root@bt jdk1.8.0_241]# vim /etc/profile #配置环境变量<br>
+#文件末尾追加<br>
+export JAVA_HOME=/opt/java/jdk1.8.0_241<br>
+export JRE_HOME=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>J</mi><mi>A</mi><mi>V</mi><msub><mi>A</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi></mrow><mi mathvariant="normal">/</mi><mi>j</mi><mi>r</mi><mi>e</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>C</mi><mi>L</mi><mi>A</mi><mi>S</mi><mi>S</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">.</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">{JAVA_HOME}/jre
+export CLASSPATH=.:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">L</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">.</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>{JAVA_HOME}/lib:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi>J</mi><mi>R</mi><msub><mi>E</mi><mi>H</mi></msub><mi>O</mi><mi>M</mi><mi>E</mi></mrow><mi mathvariant="normal">/</mi><mi>l</mi><mi>i</mi><mi>b</mi><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>P</mi><mi>A</mi><mi>T</mi><mi>H</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">{JRE_HOME}/lib
+export PATH=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.08125em;">H</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>{JAVA_HOME}/bin:<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 28: …t jdk1.8.0_241]#̲ source /etc/pr…'>PATH
+[root@bt jdk1.8.0_241]# source /etc/profile #环境变量生效
+[root@bt jdk1.8.0_241]# java -version #验证是否安装成功
+java version &quot;1.8.0_241&quot;
+Java(TM) SE Runtime Environment (build 1.8.0_241-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)
+0X01 Maven安装过程
+[root@bt opt]# wget https://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz #下载安装包
+[root@bt maven]# tar zxvf apache-maven-3.5.0-bin.tar.gz  #解压
+[root@bt maven]# mv apache-maven-3.5.0 maven #重命名
+[root@bt maven]# pwd #路径信息
+/opt/maven/maven
+[root@bt maven]# vim /etc/profile
+export PATH=/opt/maven/maven/bin:</span>PATH<br>
+[root@bt jdk1.8.0_241]# source /etc/profile #环境变量生效<br>
+[root@bt bin]# mvn  -v #安装成功<br>
+Apache Maven 3.5.0 (ff8f5e7444045639af65f6095c62210b5713f426; 2017-04-04T03:39:06+08:00)<br>
+Maven home: /opt/maven/maven<br>
+Java version: 1.8.0_241, vendor: Oracle Corporation<br>
+Java home: /opt/java/jdk1.8.0_241/jre<br>
+Default locale: zh_CN, platform encoding: UTF-8<br>
+OS name: &quot;linux&quot;, version: &quot;3.10.0-862.el7.x86_64&quot;, arch: &quot;amd64&quot;, family: &quot;unix&quot;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cenos7.3--Beef安装过程]]></title>
         <id>https://jackstrom0904.github.io/DDddP9tC2</id>
