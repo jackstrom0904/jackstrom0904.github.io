@@ -3,7 +3,7 @@
       <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Error404</title>
-<link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1582593067461">
+<link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1582593354311">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -206,10 +206,10 @@
             <p>
             
           
-            <p><strong>0x01    简介</strong><br>
+            <p>0x01    简介<br>
 GITHUB MONITOR 是vipkid安全研发团队打造的用于监控Github代码仓库的系统。通过该系统可以及时发现企业内部代码泄露、从而降低由于代码泄露导致的一系列安全风险。用户仅需通过简单的任务配置，即可在分钟级发现代码泄露的情况。项目后端使用 django-rest-framework 开发，前端使用 react 和 antd-pro 开发。<br>
 项目地址：https://github.com/VKSRC/Github-Monitor.git<br>
-<strong>0x02 mysql安装</strong><br>
+0x02 mysql安装<br>
 root@bt:~# apt-get install mysql-server -y #安装服务端<br>
 root@bt:~# apt install mysql-client -y #安装客户端<br>
 root@bt:~# apt install libmysqlclient-dev #安装依赖库<br>
@@ -219,11 +219,11 @@ mysql&gt; flush privileges; #设置的密码生效<br>
 mysql&gt; CREATE DATABASE IF NOT EXISTS github DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin; #创建项目所需的库<br>
 mysql&gt; exit #退出<br>
 root@bt:~#/etc/init.d/mysql restart #重新启动mysql<br>
-<strong>0x03 redis 安装</strong><br>
+0x03 redis 安装<br>
 root@bt:~#apt-get install redis-server -y #安装redis<br>
 root@bt:~# /etc/init.d/redis-server  [restart|start|stop]<br>
 root@bt:~#redis-cli  #客户端<br>
-<strong>0x04 项目部署过程</strong><br>
+0x04 项目部署过程<br>
 root@bt:~#git clone https://github.com/VKSRC/Github-Monitor.git #下载项目<br>
 root@bt:~#cd Github-Monitor #进入目录<br>
 root@bt:~# cp .env.sample .env #配置文件<br>
@@ -270,7 +270,7 @@ EMAIL_USE_SSL=&quot;False&quot;  # 与SMTP服务器通信时是否使用SSL（�
           
             <p>INIT_ADMIN_USERNAME=&quot;admin&quot;  # 初始化系统用户使用的用户名<br>
 INIT_ADMIN_PASSWORD=&quot;password123!@#&quot;  # 初始化系统用户使用的用户密码<br>
-<strong>0x05 安装项目依赖及初始化数据库</strong><br>
+0x05 安装项目依赖及初始化数据库<br>
 root@bt:~#cd server<br>
 root@bt:~#pip3 install -r requirements.pip -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com #安装python依赖<br>
 PS:此处有坑安装失败检查python版本<br>
@@ -278,7 +278,7 @@ root@bt:~#python3 manage.py migrate #初始化数据库<br>
 root@bt:~#python3 manage.py init_admin #初始化用户<br>
 root@bt:~#python3 manage.py runserver 0.0.0.0:8001 #启动web后端服务<br>
 root@bt:~#python3 manage.py monitor_task_service #启动监控任务服务<br>
-<strong>0x06 nodejs环境安装</strong><br>
+0x06 nodejs环境安装<br>
 root@bt:~ tar -xvf node-v12.16.1-linux-x64.tar.xz #解压<br>
 root@bt:/opt# vim /etc/profile<br>
 写入到尾部<br>
@@ -289,11 +289,11 @@ root@bt:/opt# npm -v<br>
 root@bt:/opt# node -v<br>
 v12.16.1<br>
 #npm建议安装官方最新、低版本构建项目时各种报错<br>
-**0x07 **前端代码部署<br>
+0x07 前端代码部署<br>
 root@bt:# cd client #进入项目根目录下的client目录<br>
 root@bt:#cat client /config/config.local.js #如果后端接口地址不为 127.0.0.1:8001在该配置文件中进行修改<br>
 root@bt:# npm install &amp;&amp; npm run start<br>
-**0x08 **部署完成</p>
+0x08 部署完成</p>
 
             
           
