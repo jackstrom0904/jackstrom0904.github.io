@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>渗透测试之Nmap | Error404</title>
+<title>Github Monitor 源代码安装过程 | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1582593067461">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,8 +17,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="渗透测试之Nmap" />
-    <meta name="keywords" content="渗透测试" />
+    <meta name="description" content="Github Monitor 源代码安装过程" />
+    <meta name="keywords" content="红蓝对抗" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -106,10 +106,18 @@
 <div class="sidebar">
     <div class="sidebar-box right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       
       <div class="sidebar-body gemini" id="sidebar_body">
         
-          <div class="sidebar-wrapper">
+          <div class="post-side-meta" id="post_side_meta">
+            <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://jackstrom0904.github.io/images/avatar.png"/>
     <p class="site-author-name">Error404</p>
@@ -161,6 +169,183 @@
     </div>
   
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#django-settings">Django Settings</a></li>
+<li><a href="#database-settings">Database Settings</a></li>
+<li><a href="#database-choice-is-mysql-or-sqlite">DATABASE choice is mysql or sqlite</a></li>
+<li><a href="#redis-settings">Redis Settings</a></li>
+<li><a href="#email-settings">Email Settings</a></li>
+<li><a href="#if-you-do-not-fill-it-in-it-is-nonefalse">If you do not fill it in, it is None/False</a></li>
+<li><a href="#initial-administrator">initial Administrator</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.body.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -245,15 +430,15 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/Wm37OF_ZL">
-      渗透测试之Nmap
+    <a class="post-title-link" href="https://jackstrom0904.github.io/nEacND9Ee">
+      Github Monitor 源代码安装过程
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-25</span>
+      <span>2020-02-25</span>
     </span>
     
       <span class="meta-item">
@@ -262,8 +447,8 @@
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://jackstrom0904.github.io/shen-tou-ce-shi">
-              <span>渗透测试</span>
+            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
+              <span>红蓝对抗</span>
             </a>
           
         
@@ -272,18 +457,92 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1<span class="pc-show">字数</span></span>
+      <span>891<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>2</p>
+                <p><strong>0x01    简介</strong><br>
+GITHUB MONITOR 是vipkid安全研发团队打造的用于监控Github代码仓库的系统。通过该系统可以及时发现企业内部代码泄露、从而降低由于代码泄露导致的一系列安全风险。用户仅需通过简单的任务配置，即可在分钟级发现代码泄露的情况。项目后端使用 django-rest-framework 开发，前端使用 react 和 antd-pro 开发。<br>
+项目地址：https://github.com/VKSRC/Github-Monitor.git<br>
+<strong>0x02 mysql安装</strong><br>
+root@bt:~# apt-get install mysql-server -y #安装服务端<br>
+root@bt:~# apt install mysql-client -y #安装客户端<br>
+root@bt:~# apt install libmysqlclient-dev #安装依赖库<br>
+root@bt:~# mysql<br>
+mysql&gt; update mysql.user set authentication_string=PASSWORD('123456'), plugin='mysql_native_password' where user='root'; ##设置数据库密码<br>
+mysql&gt; flush privileges; #设置的密码生效<br>
+mysql&gt; CREATE DATABASE IF NOT EXISTS github DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin; #创建项目所需的库<br>
+mysql&gt; exit #退出<br>
+root@bt:~#/etc/init.d/mysql restart #重新启动mysql<br>
+<strong>0x03 redis 安装</strong><br>
+root@bt:~#apt-get install redis-server -y #安装redis<br>
+root@bt:~# /etc/init.d/redis-server  [restart|start|stop]<br>
+root@bt:~#redis-cli  #客户端<br>
+<strong>0x04 项目部署过程</strong><br>
+root@bt:~#git clone https://github.com/VKSRC/Github-Monitor.git #下载项目<br>
+root@bt:~#cd Github-Monitor #进入目录<br>
+root@bt:~# cp .env.sample .env #配置文件<br>
+root@bt:~# vim .env #编辑配置文件</p>
+<h1 id="django-settings">Django Settings</h1>
+<p>DEBUG=&quot;True&quot;  # Django后台是否以debug模式运行, 可选True/False<br>
+ALLOWED_HOSTS=&quot;*,127.0.0.1,localhost&quot;  # 配置Django Allowed_Hosts, 如果DEBUG为False, 需要将访问的host地址添加进来，如'localhost,github.vipkid.com.cn'</p>
+<h1 id="database-settings">Database Settings</h1>
+<h1 id="database-choice-is-mysql-or-sqlite">DATABASE choice is mysql or sqlite</h1>
+<p>DATABASE=&quot;mysql&quot;  # 数据库类型, 可选sqlite或mysql<br>
+DB_NAME=&quot;github&quot;  # 数据库名称<br>
+DB_HOST=&quot;127.0.0.1&quot;  # mysql host<br>
+DB_PORT=&quot;3306&quot;  # mysql port<br>
+DB_USER=&quot;root&quot;  # mysql用户名<br>
+DB_PASSWORD=&quot;123456&quot;  # mysql密码</p>
+<h1 id="redis-settings">Redis Settings</h1>
+<p>REDIS_HOST=&quot;127.0.0.1&quot;  # redis host<br>
+REDIS_PORT=&quot;6379&quot;  # redis port<br>
+REDIS_PASSWORD=&quot;&quot;  # redis password</p>
+<h1 id="email-settings">Email Settings</h1>
+<h1 id="if-you-do-not-fill-it-in-it-is-nonefalse">If you do not fill it in, it is None/False</h1>
+<p>EMAIL_HOST=&quot;smtp.example.com&quot;  # smtp host<br>
+EMAIL_PORT=&quot;25&quot;  # smtp port<br>
+FROM_EMAIL=&quot;secuirty@example.com&quot;  # 发件人<br>
+EMAIL_HOST_USER=&quot;security@example.com&quot;  # email user, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_HOST_PASSWORD=&quot;password123!@#&quot;  # email password, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_USE_TLS=&quot;False&quot;  # 与SMTP服务器通信时是否使用TLS（安全）连接, 可选True/False<br>
+EMAIL_USE_SSL=&quot;False&quot;  # 与SMTP服务器通信时是否使用SSL（安全）连接, 可选True/False</p>
+<h1 id="initial-administrator">initial Administrator</h1>
+<p>INIT_ADMIN_USERNAME=&quot;admin&quot;  # 初始化系统用户使用的用户名<br>
+INIT_ADMIN_PASSWORD=&quot;password123!@#&quot;  # 初始化系统用户使用的用户密码<br>
+<strong>0x05 安装项目依赖及初始化数据库</strong><br>
+root@bt:~#cd server<br>
+root@bt:~#pip3 install -r requirements.pip -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com #安装python依赖<br>
+PS:此处有坑安装失败检查python版本<br>
+root@bt:~#python3 manage.py migrate #初始化数据库<br>
+root@bt:~#python3 manage.py init_admin #初始化用户<br>
+root@bt:~#python3 manage.py runserver 0.0.0.0:8001 #启动web后端服务<br>
+root@bt:~#python3 manage.py monitor_task_service #启动监控任务服务<br>
+<strong>0x06 nodejs环境安装</strong><br>
+root@bt:~ tar -xvf node-v12.16.1-linux-x64.tar.xz #解压<br>
+root@bt:/opt# vim /etc/profile<br>
+写入到尾部<br>
+export PATH=/opt/node/bin/:$PATH<br>
+root@bt:/opt# source /etc/profile #环境变量生效<br>
+root@bt:/opt# npm -v<br>
+6.13.4<br>
+root@bt:/opt# node -v<br>
+v12.16.1<br>
+#npm建议安装官方最新、低版本构建项目时各种报错<br>
+**0x07 **前端代码部署<br>
+root@bt:# cd client #进入项目根目录下的client目录<br>
+root@bt:#cat client /config/config.local.js #如果后端接口地址不为 127.0.0.1:8001在该配置文件中进行修改<br>
+root@bt:# npm install &amp;&amp; npm run start<br>
+**0x08 **部署完成</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://jackstrom0904.github.io/post-images/1582593041920.png" alt="" loading="lazy"></figure>
 
               </div>
               <div class="post-footer">
@@ -294,7 +553,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/Wm37OF_ZL" title="渗透测试之Nmap">渗透测试之Nmap</a>
+      <a href="https://jackstrom0904.github.io/nEacND9Ee" title="Github Monitor 源代码安装过程">Github Monitor 源代码安装过程</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -303,21 +562,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://jackstrom0904.github.io/shen-tou-ce-shi"># 渗透测试</a>
+      <a href="https://jackstrom0904.github.io/x4l8rqWJg"># 红蓝对抗</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/5J3Cs3gZQ">开源蜜罐之HFish部署</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/5J3Cs3gZQ">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/axcjIUufJ">渗透测试之基础信息收集</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/axcjIUufJ">下一篇</a>
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/hly_MxoM5">cetos7安装JAVA开发环境</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/hly_MxoM5">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

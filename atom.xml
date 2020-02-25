@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-02-22T02:12:15.113Z</updated>
+    <updated>2020-02-25T01:11:14.694Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,163 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Github Monitor 源代码安装过程]]></title>
+        <id>https://jackstrom0904.github.io/nEacND9Ee</id>
+        <link href="https://jackstrom0904.github.io/nEacND9Ee">
+        </link>
+        <updated>2020-02-25T00:25:27.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>0x01    简介</strong><br>
+GITHUB MONITOR 是vipkid安全研发团队打造的用于监控Github代码仓库的系统。通过该系统可以及时发现企业内部代码泄露、从而降低由于代码泄露导致的一系列安全风险。用户仅需通过简单的任务配置，即可在分钟级发现代码泄露的情况。项目后端使用 django-rest-framework 开发，前端使用 react 和 antd-pro 开发。<br>
+项目地址：https://github.com/VKSRC/Github-Monitor.git<br>
+<strong>0x02 mysql安装</strong><br>
+root@bt:~# apt-get install mysql-server -y #安装服务端<br>
+root@bt:~# apt install mysql-client -y #安装客户端<br>
+root@bt:~# apt install libmysqlclient-dev #安装依赖库<br>
+root@bt:~# mysql<br>
+mysql&gt; update mysql.user set authentication_string=PASSWORD('123456'), plugin='mysql_native_password' where user='root'; ##设置数据库密码<br>
+mysql&gt; flush privileges; #设置的密码生效<br>
+mysql&gt; CREATE DATABASE IF NOT EXISTS github DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin; #创建项目所需的库<br>
+mysql&gt; exit #退出<br>
+root@bt:~#/etc/init.d/mysql restart #重新启动mysql<br>
+<strong>0x03 redis 安装</strong><br>
+root@bt:~#apt-get install redis-server -y #安装redis<br>
+root@bt:~# /etc/init.d/redis-server  [restart|start|stop]<br>
+root@bt:~#redis-cli  #客户端<br>
+<strong>0x04 项目部署过程</strong><br>
+root@bt:~#git clone https://github.com/VKSRC/Github-Monitor.git #下载项目<br>
+root@bt:~#cd Github-Monitor #进入目录<br>
+root@bt:~# cp .env.sample .env #配置文件<br>
+root@bt:~# vim .env #编辑配置文件</p>
+<h1 id="django-settings">Django Settings</h1>
+<p>DEBUG=&quot;True&quot;  # Django后台是否以debug模式运行, 可选True/False<br>
+ALLOWED_HOSTS=&quot;*,127.0.0.1,localhost&quot;  # 配置Django Allowed_Hosts, 如果DEBUG为False, 需要将访问的host地址添加进来，如'localhost,github.vipkid.com.cn'</p>
+<h1 id="database-settings">Database Settings</h1>
+<h1 id="database-choice-is-mysql-or-sqlite">DATABASE choice is mysql or sqlite</h1>
+<p>DATABASE=&quot;mysql&quot;  # 数据库类型, 可选sqlite或mysql<br>
+DB_NAME=&quot;github&quot;  # 数据库名称<br>
+DB_HOST=&quot;127.0.0.1&quot;  # mysql host<br>
+DB_PORT=&quot;3306&quot;  # mysql port<br>
+DB_USER=&quot;root&quot;  # mysql用户名<br>
+DB_PASSWORD=&quot;123456&quot;  # mysql密码</p>
+<h1 id="redis-settings">Redis Settings</h1>
+<p>REDIS_HOST=&quot;127.0.0.1&quot;  # redis host<br>
+REDIS_PORT=&quot;6379&quot;  # redis port<br>
+REDIS_PASSWORD=&quot;&quot;  # redis password</p>
+<h1 id="email-settings">Email Settings</h1>
+<h1 id="if-you-do-not-fill-it-in-it-is-nonefalse">If you do not fill it in, it is None/False</h1>
+<p>EMAIL_HOST=&quot;smtp.example.com&quot;  # smtp host<br>
+EMAIL_PORT=&quot;25&quot;  # smtp port<br>
+FROM_EMAIL=&quot;secuirty@example.com&quot;  # 发件人<br>
+EMAIL_HOST_USER=&quot;security@example.com&quot;  # email user, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_HOST_PASSWORD=&quot;password123!@#&quot;  # email password, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_USE_TLS=&quot;False&quot;  # 与SMTP服务器通信时是否使用TLS（安全）连接, 可选True/False<br>
+EMAIL_USE_SSL=&quot;False&quot;  # 与SMTP服务器通信时是否使用SSL（安全）连接, 可选True/False</p>
+<h1 id="initial-administrator">initial Administrator</h1>
+<p>INIT_ADMIN_USERNAME=&quot;admin&quot;  # 初始化系统用户使用的用户名<br>
+INIT_ADMIN_PASSWORD=&quot;password123!@#&quot;  # 初始化系统用户使用的用户密码<br>
+<strong>0x05 安装项目依赖及初始化数据库</strong><br>
+root@bt:~#cd server<br>
+root@bt:~#pip3 install -r requirements.pip -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com #安装python依赖<br>
+PS:此处有坑安装失败检查python版本<br>
+root@bt:~#python3 manage.py migrate #初始化数据库<br>
+root@bt:~#python3 manage.py init_admin #初始化用户<br>
+root@bt:~#python3 manage.py runserver 0.0.0.0:8001 #启动web后端服务<br>
+root@bt:~#python3 manage.py monitor_task_service #启动监控任务服务<br>
+<strong>0x06 nodejs环境安装</strong><br>
+root@bt:~ tar -xvf node-v12.16.1-linux-x64.tar.xz #解压<br>
+root@bt:/opt# vim /etc/profile<br>
+写入到尾部<br>
+export PATH=/opt/node/bin/:$PATH<br>
+root@bt:/opt# source /etc/profile #环境变量生效<br>
+root@bt:/opt# npm -v<br>
+6.13.4<br>
+root@bt:/opt# node -v<br>
+v12.16.1<br>
+#npm建议安装官方最新、低版本构建项目时各种报错<br>
+**0x07 **前端代码部署<br>
+root@bt:# cd client #进入项目根目录下的client目录<br>
+root@bt:#cat client /config/config.local.js #如果后端接口地址不为 127.0.0.1:8001在该配置文件中进行修改<br>
+root@bt:# npm install &amp;&amp; npm run start<br>
+**0x08 **部署完成</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>0x01    简介</strong><br>
+GITHUB MONITOR 是vipkid安全研发团队打造的用于监控Github代码仓库的系统。通过该系统可以及时发现企业内部代码泄露、从而降低由于代码泄露导致的一系列安全风险。用户仅需通过简单的任务配置，即可在分钟级发现代码泄露的情况。项目后端使用 django-rest-framework 开发，前端使用 react 和 antd-pro 开发。<br>
+项目地址：https://github.com/VKSRC/Github-Monitor.git<br>
+<strong>0x02 mysql安装</strong><br>
+root@bt:~# apt-get install mysql-server -y #安装服务端<br>
+root@bt:~# apt install mysql-client -y #安装客户端<br>
+root@bt:~# apt install libmysqlclient-dev #安装依赖库<br>
+root@bt:~# mysql<br>
+mysql&gt; update mysql.user set authentication_string=PASSWORD('123456'), plugin='mysql_native_password' where user='root'; ##设置数据库密码<br>
+mysql&gt; flush privileges; #设置的密码生效<br>
+mysql&gt; CREATE DATABASE IF NOT EXISTS github DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin; #创建项目所需的库<br>
+mysql&gt; exit #退出<br>
+root@bt:~#/etc/init.d/mysql restart #重新启动mysql<br>
+<strong>0x03 redis 安装</strong><br>
+root@bt:~#apt-get install redis-server -y #安装redis<br>
+root@bt:~# /etc/init.d/redis-server  [restart|start|stop]<br>
+root@bt:~#redis-cli  #客户端<br>
+<strong>0x04 项目部署过程</strong><br>
+root@bt:~#git clone https://github.com/VKSRC/Github-Monitor.git #下载项目<br>
+root@bt:~#cd Github-Monitor #进入目录<br>
+root@bt:~# cp .env.sample .env #配置文件<br>
+root@bt:~# vim .env #编辑配置文件</p>
+<h1 id="django-settings">Django Settings</h1>
+<p>DEBUG=&quot;True&quot;  # Django后台是否以debug模式运行, 可选True/False<br>
+ALLOWED_HOSTS=&quot;*,127.0.0.1,localhost&quot;  # 配置Django Allowed_Hosts, 如果DEBUG为False, 需要将访问的host地址添加进来，如'localhost,github.vipkid.com.cn'</p>
+<h1 id="database-settings">Database Settings</h1>
+<h1 id="database-choice-is-mysql-or-sqlite">DATABASE choice is mysql or sqlite</h1>
+<p>DATABASE=&quot;mysql&quot;  # 数据库类型, 可选sqlite或mysql<br>
+DB_NAME=&quot;github&quot;  # 数据库名称<br>
+DB_HOST=&quot;127.0.0.1&quot;  # mysql host<br>
+DB_PORT=&quot;3306&quot;  # mysql port<br>
+DB_USER=&quot;root&quot;  # mysql用户名<br>
+DB_PASSWORD=&quot;123456&quot;  # mysql密码</p>
+<h1 id="redis-settings">Redis Settings</h1>
+<p>REDIS_HOST=&quot;127.0.0.1&quot;  # redis host<br>
+REDIS_PORT=&quot;6379&quot;  # redis port<br>
+REDIS_PASSWORD=&quot;&quot;  # redis password</p>
+<h1 id="email-settings">Email Settings</h1>
+<h1 id="if-you-do-not-fill-it-in-it-is-nonefalse">If you do not fill it in, it is None/False</h1>
+<p>EMAIL_HOST=&quot;smtp.example.com&quot;  # smtp host<br>
+EMAIL_PORT=&quot;25&quot;  # smtp port<br>
+FROM_EMAIL=&quot;secuirty@example.com&quot;  # 发件人<br>
+EMAIL_HOST_USER=&quot;security@example.com&quot;  # email user, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_HOST_PASSWORD=&quot;password123!@#&quot;  # email password, 如为匿名发送，将值设为空字符即可<br>
+EMAIL_USE_TLS=&quot;False&quot;  # 与SMTP服务器通信时是否使用TLS（安全）连接, 可选True/False<br>
+EMAIL_USE_SSL=&quot;False&quot;  # 与SMTP服务器通信时是否使用SSL（安全）连接, 可选True/False</p>
+<h1 id="initial-administrator">initial Administrator</h1>
+<p>INIT_ADMIN_USERNAME=&quot;admin&quot;  # 初始化系统用户使用的用户名<br>
+INIT_ADMIN_PASSWORD=&quot;password123!@#&quot;  # 初始化系统用户使用的用户密码<br>
+<strong>0x05 安装项目依赖及初始化数据库</strong><br>
+root@bt:~#cd server<br>
+root@bt:~#pip3 install -r requirements.pip -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com #安装python依赖<br>
+PS:此处有坑安装失败检查python版本<br>
+root@bt:~#python3 manage.py migrate #初始化数据库<br>
+root@bt:~#python3 manage.py init_admin #初始化用户<br>
+root@bt:~#python3 manage.py runserver 0.0.0.0:8001 #启动web后端服务<br>
+root@bt:~#python3 manage.py monitor_task_service #启动监控任务服务<br>
+<strong>0x06 nodejs环境安装</strong><br>
+root@bt:~ tar -xvf node-v12.16.1-linux-x64.tar.xz #解压<br>
+root@bt:/opt# vim /etc/profile<br>
+写入到尾部<br>
+export PATH=/opt/node/bin/:$PATH<br>
+root@bt:/opt# source /etc/profile #环境变量生效<br>
+root@bt:/opt# npm -v<br>
+6.13.4<br>
+root@bt:/opt# node -v<br>
+v12.16.1<br>
+#npm建议安装官方最新、低版本构建项目时各种报错<br>
+**0x07 **前端代码部署<br>
+root@bt:# cd client #进入项目根目录下的client目录<br>
+root@bt:#cat client /config/config.local.js #如果后端接口地址不为 127.0.0.1:8001在该配置文件中进行修改<br>
+root@bt:# npm install &amp;&amp; npm run start<br>
+**0x08 **部署完成</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://jackstrom0904.github.io/post-images/1582593041920.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[cetos7安装JAVA开发环境]]></title>
         <id>https://jackstrom0904.github.io/hly_MxoM5</id>
@@ -247,9 +404,6 @@ sqlmap.py: error: missing a mandatory option (-d, -u, -l, -m, -r, -g, -c, --list
 root@bt:/# apt-get install libxdamage1 libgtk-3-0 libasound2 libnss3 libxss1 libx11-xcb-dev -y #安装依赖<br>
 root@bt:/opt/wvs# ./acunetix_trial.sh #安装官方程序 按照信息输入即可<br>
 root@bt:/opt/wvs# cp patch_awvs /home/acunetix/.acunetix_trial/v_190927120/scanner/ #将破解补丁拷贝到安装目录</p>
-<p>0x03<br>
-0x04<br>
-0x05</p>
 ]]></content>
     </entry>
     <entry>
