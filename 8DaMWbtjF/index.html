@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>渗透测试之基础信息收集 | Error404</title>
+<title>Centos7.5 安装python3.8 | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1582770638298">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,8 +17,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="渗透测试之基础信息收集" />
-    <meta name="keywords" content="渗透测试" />
+    <meta name="description" content="Centos7.5 安装python3.8" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -245,47 +245,41 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/axcjIUufJ">
-      渗透测试之基础信息收集
+    <a class="post-title-link" href="https://jackstrom0904.github.io/8DaMWbtjF">
+      Centos7.5 安装python3.8
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-25</span>
+      <span>2020-02-27</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://jackstrom0904.github.io/shen-tou-ce-shi">
-              <span>渗透测试</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>0分钟</span>
+      <span>1分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>0<span class="pc-show">字数</span></span>
+      <span>124<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <ol>
-<li></li>
-</ol>
+                <p>#下载<br>
+[root@bogon home]# wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz #<br>
+#安装依赖<br>
+[root@bogon ~]# yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel libffi-devel gcc* make -y  # yum-builddep 命令 设置 python 编译环境，下载缺少的依赖 此处必须执行、不然编译会报错<br>
+[root@bogon home]# yum-builddep python<br>
+#源代码进行解压并编译安装<br>
+[root@bogon home]#  ./configure<br>
+[root@bogon home]#  make &amp;&amp; make install<br>
+#安装成功<br>
+[root@bogon Python-3.8.2]# python3 -V<br>
+Python 3.8.2</p>
 
               </div>
               <div class="post-footer">
@@ -296,7 +290,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/axcjIUufJ" title="渗透测试之基础信息收集">渗透测试之基础信息收集</a>
+      <a href="https://jackstrom0904.github.io/8DaMWbtjF" title="Centos7.5 安装python3.8">Centos7.5 安装python3.8</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -305,21 +299,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://jackstrom0904.github.io/shen-tou-ce-shi"># 渗透测试</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/Wm37OF_ZL">渗透测试之Nmap</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/Wm37OF_ZL">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/SNQOq63GI">渗透测试工具之Sqlmap</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/SNQOq63GI">下一篇</a>
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/nEacND9Ee">Github Monitor 源代码安装过程</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/nEacND9Ee">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

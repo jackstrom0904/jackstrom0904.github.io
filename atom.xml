@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-02-25T01:15:59.078Z</updated>
+    <updated>2020-02-27T02:30:50.088Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Centos7.5 安装python3.8]]></title>
+        <id>https://jackstrom0904.github.io/8DaMWbtjF</id>
+        <link href="https://jackstrom0904.github.io/8DaMWbtjF">
+        </link>
+        <updated>2020-02-27T02:25:22.000Z</updated>
+        <content type="html"><![CDATA[<p>#下载<br>
+[root@bogon home]# wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz #<br>
+#安装依赖<br>
+[root@bogon ~]# yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel libffi-devel gcc* make -y  # yum-builddep 命令 设置 python 编译环境，下载缺少的依赖 此处必须执行、不然编译会报错<br>
+[root@bogon home]# yum-builddep python<br>
+#源代码进行解压并编译安装<br>
+[root@bogon home]#  ./configure<br>
+[root@bogon home]#  make &amp;&amp; make install<br>
+#安装成功<br>
+[root@bogon Python-3.8.2]# python3 -V<br>
+Python 3.8.2</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Github Monitor 源代码安装过程]]></title>
         <id>https://jackstrom0904.github.io/nEacND9Ee</id>
