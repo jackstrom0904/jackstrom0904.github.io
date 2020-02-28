@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-02-27T02:30:50.088Z</updated>
+    <updated>2020-02-28T03:30:53.909Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,48 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[VIM插件-Pydiction]]></title>
+        <id>https://jackstrom0904.github.io/uneFiWtvX</id>
+        <link href="https://jackstrom0904.github.io/uneFiWtvX">
+        </link>
+        <updated>2020-02-28T03:27:02.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 下载<br>
+[root@bogon ~]# git clone https://github.com/rkulla/pydiction.git<br>
+[root@bogon ~]# mkdir ~/.vim<br>
+[root@bogon ~]# mkidr ~/.vim/tools<br>
+0x02 配置<br>
+[root@bogon ~]# cp -r ~/.vim/tools/pydiction/after/ ~/.vim<br>
+0x03 编辑.vimrc配置文件<br>
+[root@bogon ~]# vim ~/.vimrc<br>
+set nocompatible &quot; be iMproved, required<br>
+filetype off &quot; required<br>
+set rtp+=~/.vim/bundle/Vundle.vim<br>
+call vundle#begin()<br>
+Plugin 'VundleVim/Vundle.vim'<br>
+call vundle#end()<br>
+filetype plugin on<br>
+let g:pydiction_location = '/root/tools/pydiction/complete-dict'<br>
+let g:pydiction_menu_height = 5<br>
+set nocompatible &quot;关闭与vi的兼容模式<br>
+set number &quot;显示行号<br>
+set nowrap    &quot;不自动折行<br>
+set showmatch    &quot;显示匹配的括号<br>
+set scrolloff=3        &quot;距离顶部和底部3行&quot;<br>
+set encoding=utf-8  &quot;编码<br>
+set fenc=utf-8      &quot;编码<br>
+set mouse=a        &quot;启用鼠标<br>
+set hlsearch        &quot;搜索高亮<br>
+syntax on    &quot;语法高亮<br>
+set tabstop=4   &quot;tab宽度<br>
+set softtabstop=4<br>
+set shiftwidth=4<br>
+set textwidth=79  &quot;行最大宽度<br>
+set expandtab       &quot;tab替换为空格键<br>
+set autoindent      &quot;自动缩进<br>
+set fileformat=unix   &quot;保存文件格式</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Centos7.5 安装python3.8]]></title>
         <id>https://jackstrom0904.github.io/8DaMWbtjF</id>
