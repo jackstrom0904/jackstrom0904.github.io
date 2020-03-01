@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-02-28T03:32:00.423Z</updated>
+    <updated>2020-03-01T03:06:27.516Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux-figlet]]></title>
+        <id>https://jackstrom0904.github.io/Lhp38_H8e</id>
+        <link href="https://jackstrom0904.github.io/Lhp38_H8e">
+        </link>
+        <updated>2020-03-01T02:58:35.000Z</updated>
+        <content type="html"><![CDATA[<p>1.下载<br>
+[root@bogon ~]# wget ftp://ftp.figlet.org/pub/figlet/program/unix/figlet-2.2.5.tar.gz<br>
+2.安装<br>
+[root@bogon ~]# tar zxvf figlet-2.2.5.tar.gz<br>
+[root@bogon ~]# cd figlet-2.2.5/<br>
+[root@bogon ~]# make &amp;&amp; make install<br>
+3.使用<br>
+[root@bogon ~]# figlet Jsnoort<br>
+_                            _<br>
+| |___ _ __   ___   ___  _ <em><em>| |</em><br>
+_  | / <em><em>| '</em> \ / _ \ / _ | '</em></em>| <em><em>|<br>
+| |<em>| _</em> \ | | | (<em>) | (</em>) | |  | |</em><br>
+_</em><em>/|</em><em><em>/</em>| |</em>|_<strong>/ _</strong>/|<em>|   _</em>|</p>
+<p>[root@bogon ~]# showfigfonts # 查看系统可用的字体</p>
+<p>big :<br>
+_     _<br>
+| |   (<em>)<br>
+| |__  _  __ _<br>
+| '</em> | |/ <em>` |<br>
+| |</em>) | | (<em>| |<br>
+|</em>._<em>/|<em>|_</em>, |<br>
+<strong>/ |<br>
+|</strong></em>/<br>
+[root@bogon ~]# figlet -f bubble CVE-2020-0000  #-f 指定字体</p>
+<hr>
+<p>/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \<br>
+( C | V | E | - | 2 | 0 | 2 | 0 | - | 0 | 0 | 0 | 0 )<br>
+_/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VIM插件-Pydiction]]></title>
         <id>https://jackstrom0904.github.io/uneFiWtvX</id>
@@ -606,24 +642,6 @@ root@bt:/opt# vim /etc/pam.d/gdm-password<br>
 root@bt:/opt# vim /root/.profile<br>
 将尾行修改成tty -s &amp;&amp; mesg n || true</p>
 <!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[甲方安全建设之路]]></title>
-        <id>https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu</id>
-        <link href="https://jackstrom0904.github.io/jia-fang-an-quan-jian-she-zhi-lu">
-        </link>
-        <updated>2020-01-16T04:38:24.000Z</updated>
-        <content type="html"><![CDATA[<p>此文源于前几天参加的某局的会议、一些心得及总结。<br>
-1.安全不等于设备数量<br>
-目前部分企业的安全建设之路，最喜欢的就是大量采购安全设备(FW，IDS、IPS、DDOS)。HW期间其实是最好的一个证明、安全不等于设备数量。本质上来说安全设备还是有存在的意义、但是为何HW期间<br>
-叠加的安全设备、为何还能被突破。个人认为问题出现在以下几个点、安全策略梳理周期、补丁版本更新周期、设备是否专业人士维护。<br>
-2.弱口令如何终结<br>
-弱口令应该属于一个老生常谈的话题、但为何还会频繁发生。个人认为主要以下2个点：管理制度是否具备、技术上是否对弱口令进行把控。<br>
-3.资产管理的重要性<br>
-资产的重要性、应该在只有在国内近几年HW行动期间才会得重视、但是真正的HW阶段依旧会发现部分企业资产确实很乱，举个栗子：某子站已被拿下权限、蓝方会得花部分时间来查找对应的设备、但是从红蓝对抗的角度上来、部分企业的内网限制比较松散、一旦打点成功、这个时间足够横向突破内网。</p>
-<pre><code>安全建设之路，确实需要很长的一段时间、安全的维度是业务安全稳定的运行。安全的维度不在是把设备作为主、更多的是根据自身的业务体系、完善各种管理机制、并且在企业中融入各类开源类安全产品进行二次开发完善。
-</code></pre>
 ]]></content>
     </entry>
 </feed>
