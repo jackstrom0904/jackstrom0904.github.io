@@ -3,7 +3,7 @@
       <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Error404</title>
-<link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1583045327271">
+<link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1583052193784">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -113,7 +113,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">17</span>
+        <span class="site-item-stat-count">18</span>
         <span class="site-item-stat-name">文章</span>
       </a>
     </div>
@@ -159,6 +159,49 @@
             <div class="section-box">
               <section class="section posts-expand slide-down-in">
                 
+  <article class="post-list-box post">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://jackstrom0904.github.io/JwBsDK_57">
+      资产收集之GoBy
+    </a>
+  </h1>
+  <div class="post-meta">
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-03-01</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>9<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+    <div class="post-body">
+      
+        
+          
+          
+        
+      
+      
+      <div class="post-button text-center">
+        <a class="btn" href="https://jackstrom0904.github.io/JwBsDK_57" rel="contents">
+          阅读全文 »
+        </a>
+      </div>
+      
+    </div>
+    
+  </article>
+
   <article class="post-list-box post">
     <header class="post-header">
   <h1 class="post-title">
@@ -323,157 +366,6 @@
       
       <div class="post-button text-center">
         <a class="btn" href="https://jackstrom0904.github.io/8DaMWbtjF" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      
-    </div>
-    
-  </article>
-
-  <article class="post-list-box post">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/nEacND9Ee">
-      Github Monitor 源代码安装过程
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-02-25</span>
-    </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
-              <span>红蓝对抗</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>5分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>891<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-    <div class="post-body">
-      
-        
-          
-          
-            <p>
-            
-          
-            <p>0x01    简介<br>
-GITHUB MONITOR 是vipkid安全研发团队打造的用于监控Github代码仓库的系统。通过该系统可以及时发现企业内部代码泄露、从而降低由于代码泄露导致的一系列安全风险。用户仅需通过简单的任务配置，即可在分钟级发现代码泄露的情况。项目后端使用 django-rest-framework 开发，前端使用 react 和 antd-pro 开发。<br>
-项目地址：https://github.com/VKSRC/Github-Monitor.git<br>
-0x02 mysql安装<br>
-root@bt:~# apt-get install mysql-server -y #安装服务端<br>
-root@bt:~# apt install mysql-client -y #安装客户端<br>
-root@bt:~# apt install libmysqlclient-dev #安装依赖库<br>
-root@bt:~# mysql<br>
-mysql&gt; update mysql.user set authentication_string=PASSWORD('123456'), plugin='mysql_native_password' where user='root'; ##设置数据库密码<br>
-mysql&gt; flush privileges; #设置的密码生效<br>
-mysql&gt; CREATE DATABASE IF NOT EXISTS github DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_bin; #创建项目所需的库<br>
-mysql&gt; exit #退出<br>
-root@bt:~#/etc/init.d/mysql restart #重新启动mysql<br>
-0x03 redis 安装<br>
-root@bt:~#apt-get install redis-server -y #安装redis<br>
-root@bt:~# /etc/init.d/redis-server  [restart|start|stop]<br>
-root@bt:~#redis-cli  #客户端<br>
-0x04 项目部署过程<br>
-root@bt:~#git clone https://github.com/VKSRC/Github-Monitor.git #下载项目<br>
-root@bt:~#cd Github-Monitor #进入目录<br>
-root@bt:~# cp .env.sample .env #配置文件<br>
-root@bt:~# vim .env #编辑配置文件</p>
-<h1 id="django-settings">Django Settings</h1>
-
-            
-          
-            <p>DEBUG=&quot;True&quot;  # Django后台是否以debug模式运行, 可选True/False<br>
-ALLOWED_HOSTS=&quot;*,127.0.0.1,localhost&quot;  # 配置Django Allowed_Hosts, 如果DEBUG为False, 需要将访问的host地址添加进来，如'localhost,github.vipkid.com.cn'</p>
-<h1 id="database-settings">Database Settings</h1>
-<h1 id="database-choice-is-mysql-or-sqlite">DATABASE choice is mysql or sqlite</h1>
-
-            
-          
-            <p>DATABASE=&quot;mysql&quot;  # 数据库类型, 可选sqlite或mysql<br>
-DB_NAME=&quot;github&quot;  # 数据库名称<br>
-DB_HOST=&quot;127.0.0.1&quot;  # mysql host<br>
-DB_PORT=&quot;3306&quot;  # mysql port<br>
-DB_USER=&quot;root&quot;  # mysql用户名<br>
-DB_PASSWORD=&quot;123456&quot;  # mysql密码</p>
-<h1 id="redis-settings">Redis Settings</h1>
-
-            
-          
-            <p>REDIS_HOST=&quot;127.0.0.1&quot;  # redis host<br>
-REDIS_PORT=&quot;6379&quot;  # redis port<br>
-REDIS_PASSWORD=&quot;&quot;  # redis password</p>
-<h1 id="email-settings">Email Settings</h1>
-<h1 id="if-you-do-not-fill-it-in-it-is-nonefalse">If you do not fill it in, it is None/False</h1>
-
-            
-          
-            <p>EMAIL_HOST=&quot;smtp.example.com&quot;  # smtp host<br>
-EMAIL_PORT=&quot;25&quot;  # smtp port<br>
-FROM_EMAIL=&quot;secuirty@example.com&quot;  # 发件人<br>
-EMAIL_HOST_USER=&quot;security@example.com&quot;  # email user, 如为匿名发送，将值设为空字符即可<br>
-EMAIL_HOST_PASSWORD=&quot;password123!@#&quot;  # email password, 如为匿名发送，将值设为空字符即可<br>
-EMAIL_USE_TLS=&quot;False&quot;  # 与SMTP服务器通信时是否使用TLS（安全）连接, 可选True/False<br>
-EMAIL_USE_SSL=&quot;False&quot;  # 与SMTP服务器通信时是否使用SSL（安全）连接, 可选True/False</p>
-<h1 id="initial-administrator">initial Administrator</h1>
-
-            
-          
-            <p>INIT_ADMIN_USERNAME=&quot;admin&quot;  # 初始化系统用户使用的用户名<br>
-INIT_ADMIN_PASSWORD=&quot;password123!@#&quot;  # 初始化系统用户使用的用户密码<br>
-0x05 安装项目依赖及初始化数据库<br>
-root@bt:~#cd server<br>
-root@bt:~#pip3 install -r requirements.pip -i http://pypi.doubanio.com/simple --trusted-host pypi.doubanio.com #安装python依赖<br>
-PS:此处有坑安装失败检查python版本<br>
-root@bt:~#python3 manage.py migrate #初始化数据库<br>
-root@bt:~#python3 manage.py init_admin #初始化用户<br>
-root@bt:~#python3 manage.py runserver 0.0.0.0:8001 #启动web后端服务<br>
-root@bt:~#python3 manage.py monitor_task_service #启动监控任务服务<br>
-0x06 nodejs环境安装<br>
-root@bt:~ tar -xvf node-v12.16.1-linux-x64.tar.xz #解压<br>
-root@bt:/opt# vim /etc/profile<br>
-写入到尾部<br>
-export PATH=/opt/node/bin/:$PATH<br>
-root@bt:/opt# source /etc/profile #环境变量生效<br>
-root@bt:/opt# npm -v<br>
-6.13.4<br>
-root@bt:/opt# node -v<br>
-v12.16.1<br>
-#npm建议安装官方最新、低版本构建项目时各种报错<br>
-0x07 前端代码部署<br>
-root@bt:# cd client #进入项目根目录下的client目录<br>
-root@bt:#cat client /config/config.local.js #如果后端接口地址不为 127.0.0.1:8001在该配置文件中进行修改<br>
-root@bt:# npm install &amp;&amp; npm run start<br>
-0x08 部署完成</p>
-
-            
-          
-        
-      
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://jackstrom0904.github.io/nEacND9Ee" rel="contents">
           阅读全文 »
         </a>
       </div>
