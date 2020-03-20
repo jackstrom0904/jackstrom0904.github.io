@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-03-01T10:48:30.368Z</updated>
+    <updated>2020-03-20T01:53:15.524Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[CORS跨域资源共享漏洞]]></title>
+        <id>https://jackstrom0904.github.io/sFeAdmB8q</id>
+        <link href="https://jackstrom0904.github.io/sFeAdmB8q">
+        </link>
+        <updated>2020-03-20T01:47:15.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 漏洞说明<br>
+CORS，Cross-Origin Resource Sharing，跨源资源共享。CORS是W3C出的一个标准，其思想是使用自定义的HTTP头部让浏览器与服务器进行沟通。因为开发者需要进行跨域进行获取资源，应用场景，在a.com，想获取b.com中的数据，常用的2种方法进行跨域一种为JSONP,一种为CORS。<br>
+0x02:漏洞利用<br>
+在request请求中增加：Origin头<br>
+<img src="https://jackstrom0904.github.io/post-images/1584669128010.png" alt="" loading="lazy"><br>
+0x03 修复建议<br>
+Access-Control-Allow-Origin标头中仅允许选择受信任的域。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[资产收集之GoBy]]></title>
         <id>https://jackstrom0904.github.io/JwBsDK_57</id>
@@ -583,31 +598,6 @@ http://192.168.188.134:9001/login  #IP地址为安装机器的地址<br>
         <content type="html"><![CDATA[<ol>
 <li></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[渗透测试工具之Sqlmap]]></title>
-        <id>https://jackstrom0904.github.io/SNQOq63GI</id>
-        <link href="https://jackstrom0904.github.io/SNQOq63GI">
-        </link>
-        <updated>2020-01-25T08:57:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>1.工具介绍</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>1.工具介绍</p>
-<!-- more -->
-<!-- more -->
-<p>2.参数介绍</p>
-<!-- more -->
-<!-- more -->
-<p>3.Access注入</p>
-<!-- more -->
-<!-- more -->
-<p>4.Sqlserver注入</p>
-<!-- more -->
-<!-- more -->
-<p>5.MySQL注入</p>
-<!-- more -->
-<!-- more -->
 ]]></content>
     </entry>
 </feed>
